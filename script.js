@@ -22,8 +22,14 @@ document.querySelector('.cross-menu').addEventListener('click', function() {
 })
 
 document.querySelector('.save').addEventListener('click', function() {
-  document.querySelector('.user-name').textContent =  document.querySelector('.input-name').value;
+  document.querySelector('.user-name').textContent =  document.querySelector('.input-name').value + '!';
   document.querySelector('.input-name').value = "";
+  document.querySelector('.thanks-subscription').classList.toggle('thanks-active'); 
+})
+
+document.querySelector('.thanks-cross-menu').addEventListener('click', function() {
+  console.log('thanks cross');
+  document.querySelector('.thanks-subscription').classList.toggle('thanks-active'); 
 })
 
 

@@ -138,7 +138,34 @@ header {
   color: #fff
 }
 
-.cross-menu {
+.switcher-modal_first {
+  top: 50%;
+  right: 7%;
+}
+.switcher-modal_first,
+.switcher-modal_second,
+.switcher-modal_third,
+.switcher-modal_fourth,
+.thanks-modal_first,
+.thanks-modal_second,
+.thanks-modal_third,
+.thanks-modal_fourth  {
+  position: absolute;
+}
+.switcher-modal_second {
+  right: 15%;
+  bottom: 22%;
+}
+.switcher-modal_third {
+  bottom: 22%;
+  left: 14%;
+}
+.switcher-modal_fourth {
+  left: 9%;
+  top: 50%;
+}
+.cross-menu,
+.thanks-cross-menu {
   cursor: pointer;
   position: absolute;
   top: 5%;
@@ -148,13 +175,49 @@ header {
   background-color: black;
   transform: rotate(45deg);
 }
-.cross-menu::before {
+.cross-menu::before,
+.thanks-cross-menu:before {
   content: "";
   transform: rotate(-93deg);
   width: 15px;
   height: 3px;
   display: block;
   background-color: black;
+}
+.thanks-subscription {
+  display: none;
+  position: absolute;
+  left: 40%;
+  top: 17%;
+  width: 463px;
+  height: 245px;
+  background-color: #efefef;
+  box-shadow: 0px 4px 30px 0px;
+  border-radius: 15px
+}
+.thanks-subscription p {
+  position: absolute;
+  top: 50%;
+  transform: translateX(126%);
+}
+.thanks-modal_first {
+  right: 10%;
+  top: 25%;
+}
+.thanks-modal_second {
+  top: 58%;
+  right: 17%;
+}
+.thanks-modal_third {
+  top: 51%;
+  right: 73%;
+}
+.thanks-modal_fourth {
+  left: 9%;
+  top: 24%;
+}
+.thanks-active {
+  display: block;
 }
 @media screen and (max-width: 1199px) {
   .interactive-modal {
@@ -167,6 +230,10 @@ header {
   }
   .switcher-modal {
     left: 4%;
+  }
+  .thanks-subscription {
+    left: 10%;
+    top: 15%;
   }
 }
 @media screen and (max-width: 600px) {
@@ -372,6 +439,12 @@ header {
   .switcher-modal {
     width: 400px;
   }
+  .thanks-subscription {
+    width: 300px;
+  }
+  .thanks-subscription p {
+    transform: translateX(69%);
+  }
 }
 @media screen and (max-width: 499px) {
   .more-button-list {
@@ -384,6 +457,19 @@ header {
   .switcher-modal {
     width: 248px;
     left: 7%;
-}
-  
+  }
+  .thanks-subscription {
+    width: 223px;
+  }
+  .thanks-subscription p {
+    transform: translateX(48%);
+  }
+  .switcher-modal_third {
+    bottom: 14%;
+    left: 8%;
+  }
+  .switcher-modal_second {
+    right: 7%;
+    bottom: 14%;
+  }
 }
