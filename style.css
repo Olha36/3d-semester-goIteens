@@ -27,20 +27,51 @@ header {
   margin-right: 44px;
 }
 .switcher {
+  display: flex;
   height: 20px;
   width: 40px;
   background-color: #7A7A7A;
   border-radius: 11px;
   margin-right: 10px;
 }
-.switcher-icon {
+.switcher-circle-day,
+.switcher-circle-night {
   cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.switcher-circle-day {
+  background-color: white;
+  border: 1px solid black;
+  background-image: url('./img/button.png');
+  background-repeat: no-repeat;
+}
+.switcher-circle-night {
+  display: none;
+  background-color: black;
+  background-image: url(./img/moon.png);
+  background-repeat: no-repeat;
+}
+.switcher-active {
+  display: flex;
+  opacity: 1;
+}
+.switcher-non-active {
+  opacity: 0;
+}
+/* .switcher-icon-day {
   background-image: url('./img/button.png');
   background-repeat: no-repeat;
   display: block;
   height: 16px;
-}
-
+} */
+/* .switcher-icon-night {
+  background-image: url('./img/moon.png');
+  background-repeat: no-repeat;
+  display: block;
+  height: 16px;
+} */
 .more-button,
 .more-button-list {
   display: none;
@@ -59,6 +90,7 @@ header {
 .interactive-active {
   display: flex;
 }
+
 .interactive-modal a {
   font-size: 12px;
   color: #000000;
@@ -67,6 +99,9 @@ header {
 }
 .interactive-modal a:not(:last-child) {
   margin-bottom: 12px;
+}
+.interactive-modal a:hover {
+  background-color: rgb(189, 184, 184);
 }
 
 @media screen and (max-width: 1199px) {
