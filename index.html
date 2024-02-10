@@ -4,14 +4,118 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="./css/header.css">
   <title>3d semester project</title>
 </head>
 <body>
   <header>
+    <div class="container flex align-items">
+      <div class="logo">
+        <img src="./img/logo.png" alt="logo">
+      </div>
+
+      <div class="links flex align-items">
+        <div class="interactive-group flex align-items">
+          <p>Інтерактив</p>
+          <img src="./img/interactive-arrow.png" alt="arrow">
+        </div>
+        <p class="margin-left">Наша команда</p>
+        <p>Контакти</p>
+      </div>
+
+      <div class="welcome-wrapper flex align-items">
+        <div class="switcher">
+
+          <div class="switcher-circle-day">
+            <span class="switcher-icon-day"></span>
+          </div>
+
+          <div class="switcher-circle-night">
+            <span class="switcher-icon-night"></span>
+          </div>
+        </div>
+        <p>Вітаємо,</p>
+        <span class="user-name">User! </span>
+      </div>
+
+      <div class="list-container">
+        <button class="more-button" aria-label="Menu Button">
+          <div class="menu-icon-wrapper">
+            <div class="menu-icon-line half first"></div>
+            <div class="menu-icon-line"></div>
+            <div class="menu-icon-line half last"></div>
+          </div>
+        </button>
+        <ul class="more-button-list">
+          <li class="more-button-list-item">
+            <span>Інтерактив</span>
+            <img src="./img/interactive-arrow.png" alt="arrow">
+          </li>
+          <li class="more-button-list-item">
+            <span>Контакти</span>
+          </li>
+          <li class="more-button-list-item">
+            <div class="switcher">
+
+              <div class="switcher-circle-day">
+                <span class="switcher-icon-day"></span>
+              </div>
     
+              <div class="switcher-circle-night">
+                <span class="switcher-icon-night"></span>
+              </div>
+            </div>
+          </li>
+          <li class="more-button-list-item">
+            <span>Вітаємо, User!</span>
+          </li>
+          
+        </ul>
+      </div>
+      
+    </div>
+
+    <div class="interactive-modal align-items animate__animated animate__fadeInTopLeft">
+      <a href="#">Числовий</a>
+      <a href="#">Ігровий</a>
+      <a href="#">Ознайомчий</a>
+    </div>
+
+    <div class="switcher-modal flex align-items">
+      <img class="switcher-modal_first" src="./img/modal/1.png" alt="play">
+      <img class="switcher-modal_second" src="./img/modal/2.png" alt="cross and circle">
+      <img class="switcher-modal_third" src="./img/modal/3.png" alt="puzzles">
+      <img class="switcher-modal_fourth" src="./img/modal/4.png" alt="sword">
+      <div class="cross-menu"></div>
+      <p>
+        Привіт!
+       <br> Ви потрапили на сайт інтерактивних ігор та завдань
+       <br> Надіємось, що вам сподобається і ви отримаєте позитивні емоції!
+       <br> Бажаємо Вам гарно провести час!
+      </p>
+      <form action="">
+        <label for="name">Введіть своє ім’я:</label>
+        <input type="text" name="name" class="input-name" placeholder="Ваше ім’я...">
+      </form>
+      <button class="save">Зберегти</button>
+    </div>
+
+    <div class="thanks-subscription">
+      <div class="thanks-cross-menu"></div>
+      <img class="thanks-modal_first" src="./img/modal/1.png" alt="play">
+      <img class="thanks-modal_second" src="./img/modal/2.png" alt="cross and circle">
+      <img class="thanks-modal_third" src="./img/modal/3.png" alt="puzzles">
+      <img class="thanks-modal_fourth" src="./img/modal/4.png" alt="sword">
+      <p>Дякую за підписку!</p>
+    </div>
   </header>
   <main></main>
   <footer></footer>
+
+  <script src="./js/header.js"></script>
 </body>
 </html>
