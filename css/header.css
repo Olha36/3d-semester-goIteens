@@ -45,14 +45,14 @@ header {
 .switcher-circle-day {
   background-color: white;
   border: 1px solid black;
-  background-image: url('./img/button.png');
+  background-image: url('../img/button.png');
   background-repeat: no-repeat;
 }
 .switcher-circle-night {
   display: none;
   margin-left: 50%;
   background-color: black;
-  background-image: url(./img/moon.png);
+  background-image: url(../img/moon.png);
   background-repeat: no-repeat;
 }
 .switcher-active {
