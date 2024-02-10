@@ -19,9 +19,12 @@ header {
   cursor: pointer;
   margin-left: 3px;
 }
+.interactive-group {
+  position: relative;
+}
 .interactive-group,
 .margin-left {
-  margin-right: 10px;
+  margin-right: 44px;
 }
 .switcher {
   height: 20px;
@@ -43,7 +46,39 @@ header {
   display: none;
 }
 
+.interactive-modal {
+  display: none;
+  position: absolute;
+  left: 27%;
+  flex-direction: column;
+  width: 160px;
+  height: 153px;
+  border-style: none solid solid;
+  justify-content: center;
+}
+.interactive-active {
+  display: flex;
+}
+.interactive-modal a {
+  font-size: 12px;
+  color: #000000;
+  text-decoration: none;
 
+}
+.interactive-modal a:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+@media screen and (max-width: 1199px) {
+  .interactive-modal {
+    left: 25%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .interactive-modal {
+    left: 23%;
+  }
+}
 @media screen and (max-width: 600px) {
   .list-container {
     position: relative;
@@ -54,23 +89,27 @@ header {
   }
   .list-container.active .more-button-list-item {
     -webkit-animation: fadeInItem 0.6s 0.2s forwards;
-            animation: fadeInItem 0.6s 0.2s forwards;
+    animation: fadeInItem 0.6s 0.2s forwards;
+  }
+  .list-container.active .more-button-list-item >img {
+    margin-left: 5px;
+    cursor: pointer;
   }
   .list-container.active .more-button-list-item:nth-child(2) {
     -webkit-animation-delay: 0.4s;
-            animation-delay: 0.4s;
+    animation-delay: 0.4s;
   }
   .list-container.active .more-button-list-item:nth-child(3) {
     -webkit-animation-delay: 0.6s;
-            animation-delay: 0.6s;
+    animation-delay: 0.6s;
   }
   .list-container.active .more-button-list-item:nth-child(4) {
     -webkit-animation-delay: 0.8s;
-            animation-delay: 0.8s;
+    animation-delay: 0.8s;
   }
   .list-container.active .more-button {
     -webkit-animation: onePulse 0.6s forwards linear;
-            animation: onePulse 0.6s forwards linear;
+    animation: onePulse 0.6s forwards linear;
   }
   .list-container.active .menu-icon-wrapper {
     transform: rotate(-45deg);
@@ -234,10 +273,18 @@ header {
   .links {
     display: none;
   }  
+  .interactive-modal {
+    left: 44%;
+    top: 38%;
+  }
 }
 
 @media screen and (max-width: 499px) {
   .more-button-list {
     top: 97%;
+  }
+  .interactive-modal {
+    left: 34%;
+    top: 43%;
   }
 }
