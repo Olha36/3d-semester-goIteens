@@ -21,6 +21,11 @@ document.querySelector('.cross-menu').addEventListener('click', function() {
   document.querySelector('.switcher-modal').classList.remove('modal-active'); 
 })
 
+document.querySelector('.save').addEventListener('click', function() {
+  document.querySelector('.user-name').textContent =  document.querySelector('.input-name').value;
+  document.querySelector('.input-name').value = "";
+})
+
 
 
 
