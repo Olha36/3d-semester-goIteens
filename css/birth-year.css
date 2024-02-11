@@ -11,10 +11,15 @@ h3 {
 }
 .justify {
   justify-content: space-evenly;
+  grid-template-columns: repeat(2, 200px);
   flex-wrap: wrap;
   margin: 20px 0;
 }
-.search {
+.grid {
+  display: grid;
+}
+.search,
+.search-number {
   cursor: pointer;
   width: 35px;
   height: 35px;
