@@ -1,0 +1,33 @@
+h2 {
+  font-size: 16px;
+  line-height: 19.5px;
+  font-weight: 400;
+  text-align: center;
+}
+h3 {
+  font-size: 12px;
+  line-height: 14.63px;
+  font-weight: 400;
+  color: #039900;
+}
+.justify {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.search {
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border-radius: 0 20px 20px 0;
+  padding: 10px;
+  background-color: #000000;
+  background-image: url('../img/search.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (max-width: 343px) {
+  .input-wrapper {
+    margin-bottom: 8px;
+  }
+}

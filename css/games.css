@@ -1,0 +1,24 @@
+.popular-games h1 {
+  font-size: 24px;
+  line-height: 29.26px;
+  font-weight: 400;
+  text-align: center;
+}
+.line {
+  width: 536px;
+  border: 1px solid #000000;
+  margin: 2% auto;
+}
+@media screen and (max-width: 586px) {
+  .line {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .line {
+    width: 270px;
+  }
+  .popular-games h1 {
+    font-size: 19px;
+  }
+}
