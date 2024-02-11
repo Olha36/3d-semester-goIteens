@@ -1,7 +1,6 @@
-let year = document.querySelector('.year-heading').textContent;
 document.querySelector('.search').addEventListener('click', function() {
-    year =  document.querySelector('.input-wrapper input').value;
-    year.value = "";
+  let  year =  document.querySelector('.input-wrapper input').value;
+  document.querySelector('.input-wrapper input').value = "";
 
   function isLeapYear(year) {
     return (year % 4 === 0 && year % 100 !==0) ||(year % 400 === 0);
