@@ -1,0 +1,23 @@
+.calculator-input {
+  width: 135px;
+  height: 35px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: #D7D7D7;
+  box-shadow: 3px 3px 0px 0px #00000040;
+  border: none;
+}
+/* .button-group {} */
+.calculator-button,
+.equals {
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  padding: 5px 10px;
+  background-color: #000;
+  color: #fff;
+}
+/* .equals-button {} */
+.equals {
+  width: 27px;
+}
