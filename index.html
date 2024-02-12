@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./css/header.css">
   <link rel="stylesheet" href="./css/games.css">
   <link rel="stylesheet" href="./css/birth-year.css">
+  <link rel="stylesheet" href="./css/stone-paper-scissors.css">
   <title>3d semester project</title>
 </head>
 <body>
@@ -147,11 +148,38 @@
       
     </section>
 
+    <section class="stone-scissors">
+      <h2>Камінь - ножиці - папір</h2>
+      <div class="section-stone-wrapper flex center align-items">
+
+        <div class="pictures flex">
+          <div class="picture-wrapper stone" onclick="play('stone')"></div>
+          <div class="picture-wrapper scissors" onclick="play('scissors')"></div>
+          <div class="picture-wrapper paper" onclick="play('paper')"></div>
+        </div>
+
+        <div class="score">
+          <p>Рахунок: <span class="overall-score"></span> </p>
+          <p>Комп’ютер - <span class="computer-score"></span></p>
+          <p>Ви - <span class="user-score"></span></p>
+        </div>
+
+      </div>
+      <p class="winner"></p>
+      <div class="button-section flex">
+        <button class="computer-variant">Варіант комп’ютера</button>
+      </div>
+
+      <div class="line"></div>
+
+    </section>
+
   </main>
   <footer></footer>
 
   <script src="./js/header.js"></script>
   <script src="./js/birth-year.js"></script>
   <script src="./js/guess-number.js"></script>
+  <script src="./js/stone-paper-scissors.js"></script>
 </body>
 </html>
