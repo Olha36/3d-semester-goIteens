@@ -13,7 +13,7 @@ function updateUserScore() {
 }
 
 function play(userChoice) {
-  const computerChoices = ['stone', 'scissors', 'paper'];
+  const computerChoices = ['камінь', 'ножиці', 'папір'];
 
   const computerChoice = computerChoices[Math.floor(Math.random() * computerChoices.length)];
   
@@ -26,11 +26,11 @@ function play(userChoice) {
       updateUserScore();
       console.log(`user has won! Computer chose: ${computerChoice}`);
   } else if (userChoice === computerChoice) {
-    document.querySelector('.winner').textContent = `Нічия!`
+    document.querySelector('.winner').textContent = `Нічия!`;
     document.querySelector('.winner').style.color = 'black';
     console.log(`It's a tie! Computer chose: ${computerChoice}`);
   } else {
-    document.querySelector('.winner').textContent = `Комп'ютер виграв раунд!`
+    document.querySelector('.winner').textContent = `Комп'ютер виграв раунд!`;
     console.log(`computer has won! Computer chose: ${computerChoice}`);
     document.querySelector('.winner').style.color = 'red';
     computerScore++;
@@ -38,17 +38,11 @@ function play(userChoice) {
   }
   
   document.querySelector('.computer-variant').addEventListener('click', function() {
-    this.textContent = `${computerChoice}`
+    this.textContent = `${computerChoice}`;
   })
   document.querySelector('.computer-variant').addEventListener('blur', function() {
-    this.textContent = `Варіант комп’ютера`
+    this.textContent = `Варіант комп’ютера`;
   })
 
-  // score++;
-  // updateComputerScore();
 }
-
-// document.querySelector('.computer-score').textContent = '0';
-// document.querySelector('.user-score').textContent = '0';
-// document.querySelector('.overall-score').textContent = '0';
 
