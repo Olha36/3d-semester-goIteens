@@ -177,23 +177,31 @@
 
     <section class="calculator flex align-items">
       <div>
-        <input class="calculator-input" type="text" placeholder="Введіть число">
+        <input class="calculator-input first-number" type="number" placeholder="Введіть число">
       </div>
       <div class="button-group">
-        <button class="calculator-button">+</button>
-        <button class="calculator-button">-</button>
-        <button class="calculator-button">*</button>
-        <button class="calculator-button">/</button>
+        <button class="calculator-button addition">
+          <span>+</span>
+        </button>
+        <button class="calculator-button subtraction">
+          <span>-</span>
+        </button>
+        <button class="calculator-button multiplication">
+          <span>*</span> 
+        </button>
+        <button class="calculator-button division">
+          <span>/</span> 
+        </button>
       </div>
       <div>
-        <input class="calculator-input" type="text" placeholder="Введіть число">
+        <input class="calculator-input second-number" type="number" placeholder="Введіть число">
       </div>
       <div class="equals-button">
-        <button class="equals">=</button>
+        <button class="equals">
+          <span>=</span>
+        </button>
       </div>
-      <div>
-        <input class="calculator-input" type="text" placeholder="Введіть число">
-      </div>
+      <div class="calculator-input result" placeholder="результат"></div>
     </section>
 
   </main>
@@ -203,5 +211,6 @@
   <script src="./js/birth-year.js"></script>
   <script src="./js/guess-number.js"></script>
   <script src="./js/stone-paper-scissors.js"></script>
+  <script src="./js/calculator.js"></script>
 </body>
 </html>
