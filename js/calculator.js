@@ -3,6 +3,8 @@ console.log(buttonGroup);
 
 const firstNum = document.querySelector('.first-number');
 const secondNum = document.querySelector('.second-number');
+const resultButton = document.querySelector('.result');
+console.log(resultButton);
 
 let currentOperation = 'number';
 
@@ -15,19 +17,43 @@ document.querySelector('.subtraction').addEventListener('click', function() {
   currentOperation = 'subtraction';
 })
 
+document.querySelector('.multiplication').addEventListener('click', function() {
+  currentOperation = 'multiplication';
+})
+
+document.querySelector('.division').addEventListener('click', function() {
+  currentOperation = 'division';
+})
+
 document.querySelector('.equals').addEventListener('click', function() {
-  let result;
+  console.log('equals');
   if  (currentOperation === 'addition') {
-    result = Number(firstNum.value) + Number(secondNum.value);
+    let result = Number(firstNum.value) + Number(secondNum.value);
     console.log(result);
-    document.querySelector('.result').textContent = result;
+    resultButton.textContent = result;
   } else if(currentOperation === 'subtraction') {
-    result = Number(firstNum.value) - Number(secondNum.value);
+    let result = Number(firstNum.value) - Number(secondNum.value);
     console.log(result);
-    document.querySelector('.result').textContent = result;
+    resultButton.textContent = result;
+  } else if(currentOperation === 'multiplication') {
+    let result = Number(firstNum.value) * Number(secondNum.value);
+    console.log(result);
+    resultButton.textContent = result;
+  } else if(currentOperation === 'division') {
+    let result = Number(firstNum.value) / Number(secondNum.value);
+    console.log(result);
+    resultButton.textContent = result;
   } else {
-    console.log('not working yet');
+    console.log('hi');
   }
-  // const result = Number(firstNum.value) + Number(secondNum.value);
-  // document.querySelector('.result').textContent = result;
+})
+
+firstNum.addEventListener('input', function() {
+  currentOperation = 'number';
+})
+
+document.querySelector('.reset').addEventListener('click', function() {
+  firstNum.value = '';
+  secondNum.value = '';
+  resultButton.textContent = '';
 })
