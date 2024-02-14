@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="./css/birth-year.css">
   <link rel="stylesheet" href="./css/stone-paper-scissors.css">
   <link rel="stylesheet" href="./css/calculator.css">
+  <link rel="stylesheet" href="./css/dino.css">
   <title>3d semester project</title>
 </head>
 <body>
@@ -175,34 +176,44 @@
 
     </section>
 
-    <section class="calculator flex align-items">
-      <div>
-        <input class="calculator-input first-number" type="number" placeholder="Введіть число">
+    <section >
+      <div class="calculator flex align-items">
+        <div>
+          <input class="calculator-input first-number" type="number" placeholder="Введіть число">
+        </div>
+        <div class="button-group">
+          <button class="calculator-button addition">
+            <span>+</span>
+          </button>
+          <button class="calculator-button subtraction">
+            <span>-</span>
+          </button>
+          <button class="calculator-button multiplication">
+            <span>*</span> 
+          </button>
+          <button class="calculator-button division">
+            <span>/</span> 
+          </button>
+        </div>
+        <div>
+          <input class="calculator-input second-number" type="number" placeholder="Введіть число">
+        </div>
+        <div class="equals-button">
+          <button class="equals">
+            <span>=</span>
+          </button>
+        </div>
+        <div class="calculator-input result"></div>
+        <button class="reset">C</button>
+
       </div>
-      <div class="button-group">
-        <button class="calculator-button addition">
-          <span>+</span>
-        </button>
-        <button class="calculator-button subtraction">
-          <span>-</span>
-        </button>
-        <button class="calculator-button multiplication">
-          <span>*</span> 
-        </button>
-        <button class="calculator-button division">
-          <span>/</span> 
-        </button>
-      </div>
-      <div>
-        <input class="calculator-input second-number" type="number" placeholder="Введіть число">
-      </div>
-      <div class="equals-button">
-        <button class="equals">
-          <span>=</span>
-        </button>
-      </div>
-      <div class="calculator-input result"></div>
-      <button class="reset">C</button>
+      <div class="line"></div>
+    </section>
+
+    <section class="dino-wrapper">
+      <div class="dino"></div>
+      <div class="cactus"></div>
+      <!-- <div class="line"></div> -->
     </section>
 
   </main>
@@ -213,5 +224,6 @@
   <script src="./js/guess-number.js"></script>
   <script src="./js/stone-paper-scissors.js"></script>
   <script src="./js/calculator.js"></script>
+  <script src="./js/dino.js"></script>
 </body>
 </html>
