@@ -1,0 +1,31 @@
+.football-wrapper {
+  position: relative;
+  width: 720px;
+  height: 220px;
+  border-radius: 37px;
+  border: 2px;
+  background-color:  #5ABB58;
+  margin: auto;
+}
+.ball {
+  width: 50px;
+  height: 50px;
+  background-image: url('../img/ball.png');
+  position: absolute;
+  top: 40%;
+  left: 10%;
+}
+.roll {
+  animation: roll 2s infinite linear;
+}
+
+@keyframes roll {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    left: 10%;
+  }
+  100% {
+    transform: translateX(200px) rotate(360deg);
+    left: 416px;
+  }
+}
