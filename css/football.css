@@ -15,7 +15,18 @@
   top: 40%;
   left: 10%;
 }
-.roll {
+@media screen and (max-width: 768px) {
+  .football-wrapper {
+    width: 536px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .football-wrapper {
+    width: 320px;
+  }
+}
+/* .roll {
   animation: roll 2s infinite linear;
 }
 
@@ -28,4 +39,4 @@
     transform: translateX(200px) rotate(360deg);
     left: 416px;
   }
-}
+} */
