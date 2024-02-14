@@ -1,0 +1,96 @@
+.dino-wrapper {
+  width: 720px;
+  height: 297px;
+  border: 1px solid black;
+  margin: auto;
+}
+.dino-wrapper h2 {
+  margin: 13px 0;
+}
+.dino {
+  width: 50px;
+  height: 50px; 
+  position: relative;
+  top: 150px;
+  background-image: url('../img/dino.png');
+  background-size: 50px 50px;
+}
+.jump {
+  animation: jump 0.3s linear;
+}
+@keyframes jump {
+  0% {
+    top: 150px;
+  }
+  30% {
+    top: 130px;
+  }
+  50% {
+    top: 80px;
+  }
+  80% {
+    top: 130px;
+  }
+  100% {
+    top: 150px;
+  }
+}
+.cactus {
+  width: 20px;
+  height: 40px;
+  position: relative;
+  top: 110px;
+  left: 580px;
+  background-image: url('../img/cactus.jpeg');
+  background-size: 20px 40px;
+  
+}
+.slide {
+  animation: block 1s infinite linear;
+}
+.dino-notifications {
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+@keyframes block {
+  0% {
+    left: 580px;
+  }
+  100% {
+    left: -20px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .dino-wrapper {
+    width: 536px;
+  }
+  .cactus {
+    left: 485px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .dino-wrapper {
+    width: 320px;
+  }
+  .dino {
+    top: 120px;
+  }
+  .cactus {
+    left: 275px;
+    top: 80px;
+  }
+}
