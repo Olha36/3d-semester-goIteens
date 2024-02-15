@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="./css/calculator.css">
   <link rel="stylesheet" href="./css/dino.css">
   <link rel="stylesheet" href="./css/football.css">
+  <link rel="stylesheet" href="./css/highest-number.css">
   <title>3d semester project</title>
 </head>
 <body>
@@ -238,6 +239,20 @@
       </div>
       <div class="line"></div>
     </section>
+
+    <section class="highest-number">
+      <h2>Введіть 3 числа</h2>
+      <div class="flex number-group">
+        <input type="number" class="calculator-input enter-number-one" placeholder="Введіть число">
+        <input type="number" class="calculator-input enter-number-two" placeholder="Введіть число">
+        <input type="number" class="calculator-input enter-number-three" placeholder="Введіть число">
+      </div>
+      <div class="button-section flex">
+        <button class="button-style find-biggest" type="button">Знайти найбільше число</button>
+      </div>
+      <p class="entered-number">Найбільше число, яке Ви ввели - <span class="your-number">(число)</span></p>
+      <div class="line"></div>
+    </section>
   </main>
   <footer></footer>
 
@@ -248,5 +263,6 @@
   <script src="./js/calculator.js"></script>
   <script src="./js/dino.js"></script>
   <script src="./js/football.js"></script>
+  <script src="./js/highest-number.js"></script>
 </body>
 </html>

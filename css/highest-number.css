@@ -1,0 +1,8 @@
+.number-group {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+.entered-number {
+  text-align: center;
+}
