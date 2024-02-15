@@ -11,7 +11,7 @@
   position: relative;
   flex-wrap: wrap;
 }
-.center {
+.space-evenly {
   justify-content: space-evenly;
 }
 .stone,

@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="./css/dino.css">
   <link rel="stylesheet" href="./css/football.css">
   <link rel="stylesheet" href="./css/highest-number.css">
+  <link rel="stylesheet" href="./css/calculator-time.css">
   <title>3d semester project</title>
 </head>
 <body>
@@ -154,7 +155,7 @@
 
     <section class="stone-scissors">
       <h2>Камінь - ножиці - папір</h2>
-      <div class="section-stone-wrapper flex center align-items">
+      <div class="section-stone-wrapper flex space-evenly align-items">
 
         <div class="pictures flex">
           <div class="picture-wrapper stone" onclick="play('stone')"></div>
@@ -178,7 +179,7 @@
 
     </section>
 
-    <section >
+    <section class="calculator-section">
       <div class="calculator flex align-items">
         <div>
           <input class="calculator-input first-number" type="number" placeholder="Введіть число">
@@ -209,6 +210,19 @@
         <button class="reset">C</button>
 
       </div>
+      <div class="line"></div>
+    </section>
+
+    <section class="time-calculator">
+      <h2>Калькулятор часу</h2>
+      <div class="flex center">
+        <div class="input-wrapper flex">
+          <input type="number" class="time">
+          <div class="search-number find-time"></div>
+        </div>
+        <p class="show-time"></p>
+      </div>
+
       <div class="line"></div>
     </section>
 
@@ -264,5 +278,6 @@
   <script src="./js/dino.js"></script>
   <script src="./js/football.js"></script>
   <script src="./js/highest-number.js"></script>
+  <script src="./js/calculator-time.js"></script>
 </body>
 </html>
