@@ -6,3 +6,9 @@
   padding: 10px 45px 10px 10px;
   border: none;
 }
+.center {
+  justify-content: center;
+}
+.show-time {
+  margin-left: 30%;
+}

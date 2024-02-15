@@ -155,7 +155,7 @@
 
     <section class="stone-scissors">
       <h2>Камінь - ножиці - папір</h2>
-      <div class="section-stone-wrapper flex center align-items">
+      <div class="section-stone-wrapper flex space-evenly align-items">
 
         <div class="pictures flex">
           <div class="picture-wrapper stone" onclick="play('stone')"></div>
@@ -215,9 +215,12 @@
 
     <section class="time-calculator">
       <h2>Калькулятор часу</h2>
-      <div class="input-wrapper flex">
-        <input type="number" class="time">
-        <div class="search-number"></div>
+      <div class="flex center">
+        <div class="input-wrapper flex">
+          <input type="number" class="time">
+          <div class="search-number find-time"></div>
+        </div>
+        <p class="show-time"></p>
       </div>
 
       <div class="line"></div>
@@ -275,5 +278,6 @@
   <script src="./js/dino.js"></script>
   <script src="./js/football.js"></script>
   <script src="./js/highest-number.js"></script>
+  <script src="./js/calculator-time.js"></script>
 </body>
 </html>
