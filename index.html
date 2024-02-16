@@ -7,7 +7,7 @@
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+  />  
   <link rel="stylesheet" href="./css/header.css">
   <link rel="stylesheet" href="./css/games.css">
   <link rel="stylesheet" href="./css/birth-year.css">
@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="./css/football.css">
   <link rel="stylesheet" href="./css/highest-number.css">
   <link rel="stylesheet" href="./css/calculator-time.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/cards.css">
   <title>3d semester project</title>
 </head>
 <body>
@@ -267,7 +269,85 @@
       <p class="entered-number">Найбільше число, яке Ви ввели - <span class="your-number">(число)</span></p>
       <div class="line"></div>
     </section>
+
+    <section class="cards">
+      <h2>Про мене</h2>
+
+      <div class="cards-container">
+        <div class="card-container swiper">
+          <div class="card-content">
+            <div class="swiper-wrapper">
+              <article class="card-article swiper-slide">
+                <div class="card-image">
+                  <img src="./img/about-me/1.jpg" alt="image" class="card-img">
+                  <div class="card-shadow"></div>
+                </div>
+  
+                <div class="card-data">
+                  <h3 class="card-name">Ольга Кучерук</h3>
+                  <h4>Tech skills</h4>
+                  <p class="card-description">
+                    HTML5, CSS3, REACT.JS, TypeScript, <br> JavaScript, Git, Figma, Canva, Azure, SCSS/SASS
+                  </p>
+
+                </div>
+
+              </article>
+  
+              <article class="card-article swiper-slide">
+                <div class="card-image">
+                  <img src="./img/about-me/3.jpg" alt="image" class="card-img">
+                  <div class="card-shadow"></div>
+                </div>
+  
+                <div class="card-data">
+                  <h3 class="card-name">Ольга Кучерук</h3>
+                  <h4>Мови:</h4>
+                  <p class="card-description">
+                    Англійська - С1, польська - С1, українська - рідна, німецька В1+
+                  </p>
+
+                </div>
+              </article>
+
+              <article class="card-article swiper-slide">
+                <div class="card-image">
+                  <img src="./img/about-me/3.jpg" alt="image" class="card-img">
+                  <div class="card-shadow"></div>
+                </div>
+  
+                <div class="card-data">
+                  <h3 class="card-name">Ольга Кучерук</h3>
+                  <h4>Soft skills:</h4>
+                  <p class="card-description">
+                    Стресостійкість, наполегливість, самостійність, 
+                    <br> швидка адаптація до змін, орієнтація на результат, комунікабельність
+                  </p>
+
+                </div>
+              </article>
+    
+            </div>
+          </div>
+
+          <div class="swiper-button-next">
+            <img src="./img/right-arrow.png" alt="right-arrow">
+          </div>
+          
+          <div class="swiper-button-prev">
+            <img src="./img/left-arrow.png" alt="left-arrow">
+          </div>
+
+          <div class="swiper-pagination"></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
   </main>
+
   <footer></footer>
 
   <script src="./js/header.js"></script>
@@ -279,5 +359,7 @@
   <script src="./js/football.js"></script>
   <script src="./js/highest-number.js"></script>
   <script src="./js/calculator-time.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+   <script src="./js/about-me.js"></script>
 </body>
 </html>
