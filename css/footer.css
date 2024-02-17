@@ -1,0 +1,34 @@
+.justify-content {
+  justify-content: space-evenly;
+}
+footer {
+  padding: 10% 0;
+}
+.footer-wrapper {
+  max-width: 95%;
+  margin: auto;
+}
+.copyright > p {
+  margin-top: 10px;
+  font-size: 6px;
+}
+.contacts > p {
+  font-size: 12px;
+}
+.button-footer {
+  width: 107px;
+  height: 35px;
+}
+@media screen and (max-width: 680px) {
+  .footer-wrapper,
+  .submit-mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contacts {
+    margin: 15px;
+  }
+  .button-footer {
+    margin: 10px;
+  }
+}
