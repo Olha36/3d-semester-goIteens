@@ -75,6 +75,8 @@ header {
   height: 153px;
   border-style: none solid solid;
   justify-content: center;
+  background-color: #fff;
+  box-shadow: 1px 26px 25px 5px #373737;
 }
 .interactive-active {
   display: flex;
@@ -432,8 +434,9 @@ header {
     display: none;
   }  
   .interactive-modal {
-    left: 44%;
-    top: 38%;
+    left: 47%;
+    top: 13%;
+    width: 140px;
   }
 }
 @media screen and (max-width: 586px) {
