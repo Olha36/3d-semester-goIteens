@@ -6,3 +6,11 @@
 .entered-number {
   text-align: center;
 }
+
+@media screen and (max-width: 425px) {
+  .number-group {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}

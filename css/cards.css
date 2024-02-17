@@ -78,13 +78,17 @@ img {
   margin: 1rem 0;
 }
 
+.contacts > p {
+  margin: 5px 0;
+}
+
 
 /* Swiper class */
 .swiper-button-prev:after,
 .swiper-button-next:after {
   content: "";
 }
-
+/* 
 .swiper-button-prev,
 .swiper-button-next {
   width: initial;
@@ -92,14 +96,14 @@ img {
   font-size: 3rem;
   color: var(--second-color);
   display: none;
-}
+} */
 
 .swiper-button-prev {
-  left: 0;
+  left: 10%;
 }
 
 .swiper-button-next {
-  right: 0;
+  right: 10%;
 }
 
 .swiper-pagination-bullet {
@@ -111,15 +115,12 @@ img {
   background-color: var(--second-color);
 }
 
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
 @media screen and (max-width: 320px) {
   .card-data {
     padding: 1rem;
   }
 }
 
-/* For medium devices */
 @media screen and (min-width: 768px) {
   .card-content {
     margin-inline: 3rem;
@@ -131,7 +132,6 @@ img {
   }
 }
 
-/* For large devices */
 @media screen and (min-width: 1120px) {
   .card-container {
     max-width: 1120px;

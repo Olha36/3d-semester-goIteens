@@ -19,6 +19,12 @@ footer {
   width: 107px;
   height: 35px;
 }
+.input-footer {
+  border-radius: 20px;
+}
+.input-wrapper {
+  margin-right: 10px;
+}
 @media screen and (max-width: 680px) {
   .footer-wrapper,
   .submit-mobile {
