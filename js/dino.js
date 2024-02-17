@@ -30,11 +30,13 @@ const isAlive = setInterval(function() {
     document.querySelector('.slide').classList.remove('slide');
   }
 
-}, 1000)
+}, 10)
 
-
-document.addEventListener("keydown", function() {
-  jump();
+document.addEventListener("keydown", function(event) {
+  if(event.key == ' ' || event.key == 'Spacebar') {
+    jump();
+  }
+ 
 })
 
 startGame.addEventListener('click', function() {
