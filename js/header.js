@@ -43,7 +43,24 @@ document.querySelector('.thanks-cross-menu').addEventListener('click', function(
   document.querySelector('.thanks-subscription').classList.toggle('thanks-active'); 
 })
 
+const smartLinks = document.querySelector('.digital-group');
 
 
+const linksHandleClick = (event) => {
+  event.preventDefault();
 
+  const targetElement = document.getElementById('digital-sections');
+  targetElement.scrollIntoView({ behavior: 'smooth' });
+
+  const gamesTargetElement = document.getElementById('games');
+  gamesTargetElement.scrollIntoView({ behavior: 'smooth' })
+
+  const aboutTargetElement = document.getElementById('about-me');
+  aboutTargetElement.scrollIntoView( {behavior: 'smooth' });
+}
+
+smartLinks.addEventListener('click', linksHandleClick);
+
+document.querySelector('.game-group').addEventListener('click', linksHandleClick)
+document.querySelector('.acquainted').addEventListener('click', linksHandleClick)
 
