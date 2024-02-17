@@ -1,3 +1,6 @@
+const switchers = document.querySelectorAll('.switcher');
+const users = document.querySelectorAll('.user-name');
+
 document.querySelector('.more-button').addEventListener('click', function () {
   document.querySelector('.list-container').classList.toggle('active');
 });
@@ -10,11 +13,15 @@ document.querySelector('.more-button-list-item img').addEventListener('click', f
   document.querySelector('.interactive-modal').classList.toggle('interactive-active');
 })
 
-document.querySelector('.switcher').addEventListener('click', function () {
-  console.log('hi switcher');
+const handleClick = (event) => {
+  console.log(event.target);
   document.querySelector('.switcher-circle-night').classList.toggle('switcher-active'); 
   document.querySelector('.switcher-circle-day').classList.toggle('switcher-non-active'); 
   document.querySelector('.switcher-modal').classList.toggle('modal-active'); 
+}
+
+switchers.forEach(switcher => {
+  switcher.addEventListener('click', handleClick)
 })
 
 document.querySelector('.cross-menu').addEventListener('click', function() {
@@ -22,7 +29,11 @@ document.querySelector('.cross-menu').addEventListener('click', function() {
 })
 
 document.querySelector('.save').addEventListener('click', function() {
-  document.querySelector('.user-name').textContent =  document.querySelector('.input-name').value + '!';
+  users.forEach(user => {
+    user.textContent = document.querySelector('.input-name').value + '!'
+    console.log(user);
+  })
+  
   document.querySelector('.input-name').value = "";
   document.querySelector('.thanks-subscription').classList.toggle('thanks-active'); 
 })
@@ -32,7 +43,24 @@ document.querySelector('.thanks-cross-menu').addEventListener('click', function(
   document.querySelector('.thanks-subscription').classList.toggle('thanks-active'); 
 })
 
+const smartLinks = document.querySelector('.digital-group');
 
 
+const linksHandleClick = (event) => {
+  event.preventDefault();
 
+  const targetElement = document.getElementById('digital-sections');
+  targetElement.scrollIntoView({ behavior: 'smooth' });
+
+  const gamesTargetElement = document.getElementById('games');
+  gamesTargetElement.scrollIntoView({ behavior: 'smooth' })
+
+  const aboutTargetElement = document.getElementById('about-me');
+  aboutTargetElement.scrollIntoView( {behavior: 'smooth' });
+}
+
+smartLinks.addEventListener('click', linksHandleClick);
+
+document.querySelector('.game-group').addEventListener('click', linksHandleClick)
+document.querySelector('.acquainted').addEventListener('click', linksHandleClick)
 
