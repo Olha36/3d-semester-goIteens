@@ -37,8 +37,18 @@ button {
   width: 27px;
 }
 
-@media screen and (max-width: 493px) {
+@media screen and (max-width: 576px) {
+  .calculator {
+    flex-wrap: nowrap;
+   
+  }
+  .column {
+    flex-direction: column;
+  }
+}
+
+/* @media screen and (max-width: 493px) {
   .calculator {
     justify-content: flex-start;
   }
-}
+} */

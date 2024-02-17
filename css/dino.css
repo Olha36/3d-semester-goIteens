@@ -87,10 +87,14 @@
     width: 320px;
   }
   .dino {
-    top: 120px;
+    top: 80px;
   }
   .cactus {
     left: 275px;
-    top: 80px;
+    top: 40px;
+  }
+  
+  .dino-notifications {
+    flex-wrap: nowrap;
   }
 }
