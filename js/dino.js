@@ -24,10 +24,8 @@ function slide() {
 const isAlive = setInterval(function() {
   const dinoPosition = parseInt(window.getComputedStyle(dino).getPropertyValue('top'));
   const cactusPosition = parseInt(window.getComputedStyle(cactus).getPropertyValue('left'));
-  console.log(cactusPosition);
 
   if(cactusPosition < 50 && cactusPosition >= 0 && dinoPosition >= 140) {
-    // alert('Game over');
     document.querySelector('.game-over').textContent = 'Game is over';
     document.querySelector('.slide').classList.remove('slide');
   }
