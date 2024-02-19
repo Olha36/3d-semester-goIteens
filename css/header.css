@@ -157,7 +157,11 @@ header {
 .thanks-modal_first,
 .thanks-modal_second,
 .thanks-modal_third,
-.thanks-modal_fourth  {
+.thanks-modal_fourth,
+.email-modal_first,
+.email-modal_second,
+.email-modal_third,
+.email-modal_fourth  {
   position: absolute;
 }
 .switcher-modal_second {
@@ -173,7 +177,8 @@ header {
   top: 50%;
 }
 .cross-menu,
-.thanks-cross-menu {
+.thanks-cross-menu,
+.email-cross-menu {
   cursor: pointer;
   position: absolute;
   top: 5%;
@@ -184,7 +189,8 @@ header {
   transform: rotate(45deg);
 }
 .cross-menu::before,
-.thanks-cross-menu:before {
+.thanks-cross-menu:before,
+.email-cross-menu:before {
   content: "";
   transform: rotate(-93deg);
   width: 15px;
@@ -192,7 +198,8 @@ header {
   display: block;
   background-color: black;
 }
-.thanks-subscription {
+.thanks-subscription,
+.email-subscription {
   display: none;
   position: absolute;
   left: 40%;
@@ -203,28 +210,35 @@ header {
   box-shadow: 0px 4px 30px 0px;
   border-radius: 15px
 }
-.thanks-subscription p {
+
+.thanks-subscription p,
+.email-subscription p {
   position: absolute;
   top: 50%;
   transform: translateX(126%);
 }
-.thanks-modal_first {
+.thanks-modal_first,
+.email-modal_first {
   right: 10%;
   top: 25%;
 }
-.thanks-modal_second {
+.thanks-modal_second,
+.email-modal_second {
   top: 58%;
   right: 17%;
 }
-.thanks-modal_third {
+.thanks-modal_third,
+.email-modal_third {
   top: 51%;
   right: 73%;
 }
-.thanks-modal_fourth {
+.thanks-modal_fourth,
+.email-modal_fourth {
   left: 9%;
   top: 24%;
 }
-.thanks-active {
+.thanks-active,
+.email-active {
   display: block;
 }
 @media screen and (max-width: 1199px) {
