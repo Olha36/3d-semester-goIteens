@@ -26,6 +26,9 @@ header {
 .margin-left {
   margin-right: 44px;
 }
+.links > p {
+  cursor: pointer;
+}
 .switcher {
   display: flex;
   height: 20px;
@@ -226,6 +229,7 @@ header {
     left: 25%;
   }
 }
+
 @media screen and (max-width: 992px) {
   .interactive-modal {
     left: 23%;
@@ -238,6 +242,7 @@ header {
     top: 15%;
   }
 }
+
 @media screen and (max-width: 600px) {
   .list-container {
     position: relative;
@@ -439,6 +444,7 @@ header {
     width: 140px;
   }
 }
+
 @media screen and (max-width: 586px) {
   .switcher-modal {
     width: 400px;

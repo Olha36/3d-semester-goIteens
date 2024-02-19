@@ -44,23 +44,43 @@ document.querySelector('.thanks-cross-menu').addEventListener('click', function(
 })
 
 const smartLinks = document.querySelector('.digital-group');
+const gameGroup = document.querySelector('.game-group');
+const ourTeam = document.querySelector('.team');
 
 
-const linksHandleClick = (event) => {
+const digitalLinksHandleClick = (event) => {
   event.preventDefault();
 
   const targetElement = document.getElementById('digital-sections');
   targetElement.scrollIntoView({ behavior: 'smooth' });
 
+  
+
+  
+
+  // const contactsElement = document.getElementById('contacts-group');
+  // console.log('hi');
+  // contactsElement.scrollIntoView({ behavior: 'smooth' });
+}
+
+const gameLinksHandleClick = (event) => {
+  event.preventDefault();
+  
   const gamesTargetElement = document.getElementById('games');
   gamesTargetElement.scrollIntoView({ behavior: 'smooth' })
+}
+
+const ourTeamHandleClick = (event) => {
+  event.preventDefault();
 
   const aboutTargetElement = document.getElementById('about-me');
   aboutTargetElement.scrollIntoView( {behavior: 'smooth' });
 }
 
-smartLinks.addEventListener('click', linksHandleClick);
+smartLinks.addEventListener('click', digitalLinksHandleClick);
+gameGroup.addEventListener('click', gameLinksHandleClick);
+ourTeam.addEventListener('click', ourTeamHandleClick)
 
-document.querySelector('.game-group').addEventListener('click', linksHandleClick)
-document.querySelector('.acquainted').addEventListener('click', linksHandleClick)
+// document.querySelector('.game-group').addEventListener('click', linksHandleClick)
+// document.querySelector('.ourTeam').addEventListener('click', linksHandleClick)
 
