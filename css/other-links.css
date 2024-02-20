@@ -1,0 +1,11 @@
+.ul-links {
+  text-align: center;
+  
+}
+.ul-links a {
+  text-decoration: none;
+  color: #4964f1;
+}
+.ul-links .github-code {
+  color: rgb(3 6 8);
+}
