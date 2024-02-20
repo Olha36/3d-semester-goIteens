@@ -4,29 +4,28 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../gallery/gallery.css">
-  <title>Галерея зображень на джаваскрипт</title>
+  <title>Галерея зображень</title>
 </head>
 <body>
-   <!-- список для додання елементів галереї -->
-   <ul class="gallery js-gallery"></ul>
+  <!-- список для додання елементів галереї -->
+  <ul class="gallery js-gallery"></ul>
 
-   <!--
-     Модальне вікно для повнорозмірного зображення  -->
-   <div class="lightbox js-lightbox">
-     <div class="lightbox__overlay"></div>
+  <!--
+    Модальне вікно для повнорозмірного зображення  -->
+  <div class="lightbox js-lightbox">
+    <div class="lightbox__overlay"></div>
 
-     <div class="lightbox__content">
-       <img class="lightbox__image" src="" alt="" />
-     </div>
+    <div class="lightbox__content">
+      <img class="lightbox__image" src="" alt="" />
+    </div>
 
-     <button
-       type="button"
-       class="lightbox__button"
-       data-action="close-lightbox"
-     ></button>
-   </div>
+    <button
+      type="button"
+      class="lightbox__button"
+      data-action="close-lightbox"
+    ></button>
+  </div>
 
-   <script src="app.js" type="module"></script>
+  <script src="./gallery.js" type="module"></script>
 </body>
 </html>
