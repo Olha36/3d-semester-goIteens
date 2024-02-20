@@ -65,6 +65,9 @@ const galleryItems = [
 ];
 
 const jsGallery = document.querySelector('.js-gallery');
+const lightboxImage = document.querySelector('.lightbox__image');
+const lightbox = document.querySelector('.lightbox');
+const closeButton = document.querySelector('[data-action="close-lightbox"]');
 
 const createGalleryMarkup = (items) => {
   return items.map(({ preview, original, description }) => {
@@ -89,3 +92,56 @@ const createGalleryMarkup = (items) => {
 
 const galleryMarkup = createGalleryMarkup(galleryItems);
 jsGallery.insertAdjacentHTML('afterbegin', galleryMarkup);
+
+function changeImage(direction) {
+  const currentIndex = galleryItems.findIndex(item => item.original === lightboxImage.src);
+  let newIndex;
+
+  if (direction === 'next') {
+    newIndex = currentIndex + 1;
+    if (newIndex === galleryItems.length) {
+      newIndex = 0;
+    }
+  } else if (direction === 'prev') {
+    newIndex = currentIndex - 1;
+    if (newIndex === -1) {
+      newIndex = galleryItems.length - 1;
+    }
+  }
+
+  const newImageURL = galleryItems[newIndex].original;
+  lightboxImage.src = newImageURL;
+}
+
+const openModal = (imgUrl) => {
+  lightbox.classList.add('is-open');
+  lightboxImage.src = imgUrl;
+}
+
+const closeModal = () => {
+  lightbox.classList.remove('is-open');
+  console.log('close button was clicked');
+  lightboxImage.src = '';
+}
+
+const onKeyPress = (event) => {
+  if (event.key === 'Escape') {
+    closeModal();
+  } else if (event.key === 'ArrowRight' && lightbox.classList.contains('is-open')) {
+    changeImage('next');
+  } else if (event.key === 'ArrowLeft' && lightbox.classList.contains('is-open')) {
+    changeImage('prev');
+  }
+}
+
+const originalImgPath = (event) => {
+  event.preventDefault();
+ if(event.target.classList.contains('gallery__image')) {
+  const mainImgUrl = event.target.dataset.source;
+  openModal(mainImgUrl);
+ }
+}
+
+jsGallery.addEventListener('click', originalImgPath);
+closeButton.addEventListener('click', closeModal);
+document.addEventListener('keydown', onKeyPress);
