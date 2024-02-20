@@ -8,23 +8,27 @@
   <title>Галерея зображень</title>
 </head>
 <body>
-  <!-- список для додання елементів галереї -->
-  <ul class="gallery js-gallery"></ul>
+  <div class="return-link"></div>
+  <a href="../../index.html" class="return">Повернутися на попередню сторінку</a>
+  <div class="gallery-cards">
+    <!-- список для додання елементів галереї -->
+    <ul class="gallery js-gallery"></ul>
 
-  <!--
-    Модальне вікно для повнорозмірного зображення  -->
-  <div class="lightbox js-lightbox">
-    <div class="lightbox__overlay"></div>
+    <!--
+      Модальне вікно для повнорозмірного зображення  -->
+    <div class="lightbox js-lightbox">
+      <div class="lightbox__overlay"></div>
 
-    <div class="lightbox__content">
-      <img class="lightbox__image" src="" alt="" />
+      <div class="lightbox__content">
+        <img class="lightbox__image" src="" alt="" />
+      </div>
+
+      <button
+        type="button"
+        class="lightbox__button"
+        data-action="close-lightbox"
+      ></button>
     </div>
-
-    <button
-      type="button"
-      class="lightbox__button"
-      data-action="close-lightbox"
-    ></button>
   </div>
 
   <script src="./gallery.js" type="module"></script>

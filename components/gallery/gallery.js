@@ -64,10 +64,14 @@ const galleryItems = [
   },
 ];
 
+
 const jsGallery = document.querySelector('.js-gallery');
 const lightboxImage = document.querySelector('.lightbox__image');
 const lightbox = document.querySelector('.lightbox');
 const closeButton = document.querySelector('[data-action="close-lightbox"]');
+
+
+const currentLink = document.getElementById('currentLink');
 
 const createGalleryMarkup = (items) => {
   return items.map(({ preview, original, description }) => {
@@ -88,6 +92,8 @@ const createGalleryMarkup = (items) => {
   </li>
   `;
   }).join('');
+
+  
 }
 
 const galleryMarkup = createGalleryMarkup(galleryItems);
