@@ -74,8 +74,7 @@ header {
 
 .interactive-modal {
   display: none;
-  position: absolute;
-  left: 27%;
+  position: fixed;
   flex-direction: column;
   width: 160px;
   height: 153px;
@@ -241,16 +240,8 @@ header {
 .email-active {
   display: block;
 }
-@media screen and (max-width: 1199px) {
-  .interactive-modal {
-    left: 25%;
-  }
-}
 
 @media screen and (max-width: 992px) {
-  .interactive-modal {
-    left: 23%;
-  }
   .switcher-modal {
     left: 4%;
   }
@@ -421,7 +412,6 @@ header {
     }
   }
   
-  
   .menu-icon-wrapper {
     border-radius: 2px;
     width: 20px;
@@ -456,8 +446,6 @@ header {
     display: none;
   }  
   .interactive-modal {
-    left: 47%;
-    top: 13%;
     width: 140px;
   }
 }
@@ -476,10 +464,6 @@ header {
 @media screen and (max-width: 499px) {
   .more-button-list {
     top: 97%;
-  }
-  .interactive-modal {
-    left: 34%;
-    top: 43%;
   }
   .switcher-modal {
     width: 248px;

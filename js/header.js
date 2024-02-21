@@ -5,13 +5,37 @@ document.querySelector('.more-button').addEventListener('click', function () {
   document.querySelector('.list-container').classList.toggle('active');
 });
 
-document.querySelector('.interactive-group img').addEventListener('click', function () {
-  document.querySelector('.interactive-modal').classList.toggle('interactive-active');
-})
+// document.querySelector('.interactive-group').addEventListener('click', function () {
+//   document.querySelector('.interactive-modal').classList.toggle('interactive-active');
+// })
 
-document.querySelector('.more-button-list-item img').addEventListener('click', function () {
-  document.querySelector('.interactive-modal').classList.toggle('interactive-active');
-})
+const groupItems = document.querySelector('.interactive-group');
+
+const updatePosition = () => {
+  modalActive.classList.toggle('interactive-active');
+
+  const groupItemsRect = groupItems.getBoundingClientRect();
+  console.log(groupItemsRect);
+
+  modalActive.style.left = `${groupItemsRect.left}px`;
+  modalActive.style.top = `${groupItemsRect.bottom}`
+}
+groupItems.addEventListener('click', updatePosition);
+
+const modalActive = document.querySelector('.interactive-modal');
+const listItem = document.querySelector('.more-button-list-item');
+
+// Function to update the position of the modal
+const updateMobilePosition = () => {
+  modalActive.classList.toggle('interactive-active');
+
+  const listItemRect = listItem.getBoundingClientRect();
+  modalActive.style.left = `${listItemRect.left}px`; 
+  modalActive.style.top = `${listItemRect.bottom}px`; 
+};
+
+listItem.addEventListener('click', updateMobilePosition);
+
 
 const handleClick = (event) => {
   console.log(event.target);
@@ -81,6 +105,4 @@ smartLinks.addEventListener('click', digitalLinksHandleClick);
 gameGroup.addEventListener('click', gameLinksHandleClick);
 ourTeam.addEventListener('click', ourTeamHandleClick)
 
-// document.querySelector('.game-group').addEventListener('click', linksHandleClick)
-// document.querySelector('.ourTeam').addEventListener('click', linksHandleClick)
 
