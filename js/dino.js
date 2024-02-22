@@ -36,7 +36,6 @@ const isAlive = setInterval(function() {
   const cactusRect = cactus.getBoundingClientRect();
 
   if (cactusRect.left < dinoRect.right &&
-    cactusRect.right > dinoRect.left &&
     cactusRect.top < dinoRect.bottom &&
     !dino.classList.contains('jump')) {
   document.querySelector('.game-over').textContent = 'Game is over';
@@ -58,6 +57,9 @@ startGame.addEventListener('click', function() {
  slide();
 })
 
+startGame.addEventListener('touchstart', function() {
+  jump();
+})
 reset.addEventListener('click', function() {
   slide();
   document.querySelector('.game-over').textContent = '';
