@@ -1,6 +1,4 @@
 const dino = document.querySelector('.dino');
-// console.log(dino);
-
 const cactus = document.querySelector('.cactus');
 const startGame = document.querySelector('.start-game');
 const reset = document.querySelector('.reset-game');
@@ -17,20 +15,37 @@ function jump() {
 function slide() {
   if(cactus.classList != 'slide') {
     cactus.classList.add('slide');
-  }
+  } 
 }
 
 
+// const isAlive = setInterval(function() {
+//   const dinoPosition = parseInt(window.getComputedStyle(dino).getPropertyValue('top'));
+//   const cactusPosition = parseInt(window.getComputedStyle(cactus).getPropertyValue('left'));
+
+//   if(cactusPosition < 50 && cactusPosition >= 0 && dinoPosition >= 120) {
+//     document.querySelector('.game-over').textContent = 'Game is over';
+//     document.querySelector('.cactus').classList.remove('slide');
+//     console.log('cactus position in < 50');
+//   }
+
+// }, 10)
+
 const isAlive = setInterval(function() {
-  const dinoPosition = parseInt(window.getComputedStyle(dino).getPropertyValue('top'));
-  const cactusPosition = parseInt(window.getComputedStyle(cactus).getPropertyValue('left'));
+  const dinoRect = dino.getBoundingClientRect();
+  const cactusRect = cactus.getBoundingClientRect();
 
-  if(cactusPosition < 50 && cactusPosition >= 0 && dinoPosition >= 140) {
-    document.querySelector('.game-over').textContent = 'Game is over';
-    document.querySelector('.slide').classList.remove('slide');
-  }
-
+  if (cactusRect.left < dinoRect.right &&
+    cactusRect.right > dinoRect.left &&
+    cactusRect.top < dinoRect.bottom &&
+    !dino.classList.contains('jump')) {
+  document.querySelector('.game-over').textContent = 'Game is over';
+  document.querySelector('.cactus').classList.remove('slide');
+  console.log('game is over');
+}
 }, 10)
+
+
 
 document.addEventListener("keydown", function(event) {
   if(event.key == ' ' || event.key == 'Spacebar') {
@@ -47,3 +62,4 @@ reset.addEventListener('click', function() {
   slide();
   document.querySelector('.game-over').textContent = '';
 })
+
