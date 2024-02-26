@@ -26,17 +26,3 @@
     width: 320px;
   }
 }
-/* .roll {
-  animation: roll 2s infinite linear;
-}
-
-@keyframes roll {
-  0% {
-    transform: translateX(0) rotate(0deg);
-    left: 10%;
-  }
-  100% {
-    transform: translateX(200px) rotate(360deg);
-    left: 416px;
-  }
-} */
