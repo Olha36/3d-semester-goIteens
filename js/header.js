@@ -15,7 +15,6 @@ const updatePosition = () => {
   modalActive.classList.toggle('interactive-active');
 
   const groupItemsRect = groupItems.getBoundingClientRect();
-  console.log(groupItemsRect);
 
   modalActive.style.left = `${groupItemsRect.left}px`;
   modalActive.style.top = `${groupItemsRect.bottom}`
@@ -38,7 +37,6 @@ listItem.addEventListener('click', updateMobilePosition);
 
 
 const handleClick = (event) => {
-  console.log(event.target);
   document.querySelector('.switcher-circle-night').classList.toggle('switcher-active'); 
   document.querySelector('.switcher-circle-day').classList.toggle('switcher-non-active'); 
   document.querySelector('.switcher-modal').classList.toggle('modal-active'); 
@@ -55,7 +53,6 @@ document.querySelector('.cross-menu').addEventListener('click', function() {
 document.querySelector('.save').addEventListener('click', function() {
   users.forEach(user => {
     user.textContent = document.querySelector('.input-name').value + '!'
-    console.log(user);
   })
   
   document.querySelector('.input-name').value = "";
@@ -63,7 +60,6 @@ document.querySelector('.save').addEventListener('click', function() {
 })
 
 document.querySelector('.thanks-cross-menu').addEventListener('click', function() {
-  console.log('thanks cross');
   document.querySelector('.thanks-subscription').classList.toggle('thanks-active'); 
 })
 
@@ -77,14 +73,6 @@ const digitalLinksHandleClick = (event) => {
 
   const targetElement = document.getElementById('digital-sections');
   targetElement.scrollIntoView({ behavior: 'smooth' });
-
-  
-
-  
-
-  // const contactsElement = document.getElementById('contacts-group');
-  // console.log('hi');
-  // contactsElement.scrollIntoView({ behavior: 'smooth' });
 }
 
 const gameLinksHandleClick = (event) => {

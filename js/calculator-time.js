@@ -15,7 +15,6 @@ const showTime = document.querySelector('.show-time');
 
 timeInput.addEventListener('click', function() {
   const timeValue = Number.parseInt(time.value);
-  console.log(timeValue);
   showTime.textContent = Math.round(timeValue / 60) + ':' + (timeValue % 60);
   time.value = '';
 })

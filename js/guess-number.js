@@ -1,6 +1,5 @@
 document.querySelector('.search-number').addEventListener('click', function() {
   let inputGuessNumber = parseInt(document.querySelector('.guess-wrapper input').value);
-  console.log(inputGuessNumber);
 
   // Clear the input field
   document.querySelector('.guess-wrapper input').value = "";
@@ -10,7 +9,6 @@ document.querySelector('.search-number').addEventListener('click', function() {
   }
 
   let guessNumber = randomNum();
-  console.log(guessNumber);
 
   if (guessNumber === inputGuessNumber) {
       document.querySelector('.number-content').textContent = `Ви виграли! Число - ${guessNumber}`;

@@ -19,17 +19,6 @@ function slide() {
 }
 
 
-// const isAlive = setInterval(function() {
-//   const dinoPosition = parseInt(window.getComputedStyle(dino).getPropertyValue('top'));
-//   const cactusPosition = parseInt(window.getComputedStyle(cactus).getPropertyValue('left'));
-
-//   if(cactusPosition < 50 && cactusPosition >= 0 && dinoPosition >= 120) {
-//     document.querySelector('.game-over').textContent = 'Game is over';
-//     document.querySelector('.cactus').classList.remove('slide');
-//     console.log('cactus position in < 50');
-//   }
-
-// }, 10)
 
 const isAlive = setInterval(function() {
   const dinoRect = dino.getBoundingClientRect();
@@ -40,7 +29,6 @@ const isAlive = setInterval(function() {
     !dino.classList.contains('jump')) {
   document.querySelector('.game-over').textContent = 'Game is over';
   document.querySelector('.cactus').classList.remove('slide');
-  console.log('game is over');
 }
 }, 10)
 

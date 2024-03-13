@@ -24,14 +24,11 @@ function play(userChoice) {
       document.querySelector('.winner').style.color = '#039900';
       userScore++;
       updateUserScore();
-      console.log(`user has won! Computer chose: ${computerChoice}`);
   } else if (userChoice === computerChoice) {
     document.querySelector('.winner').textContent = `Нічия!`
     document.querySelector('.winner').style.color = 'black';
-    console.log(`It's a tie! Computer chose: ${computerChoice}`);
   } else {
     document.querySelector('.winner').textContent = `Комп'ютер виграв раунд!`
-    console.log(`computer has won! Computer chose: ${computerChoice}`);
     document.querySelector('.winner').style.color = 'red';
     computerScore++;
     updateComputerScore();

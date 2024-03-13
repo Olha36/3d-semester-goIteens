@@ -5,5 +5,4 @@ document.querySelector('.subscribe').addEventListener('click', function() {
 
 document.querySelector('.email-cross-menu').addEventListener('click', function() {
   document.querySelector('.email-subscription').classList.remove('email-active');
-  console.log('clicked');
 });
