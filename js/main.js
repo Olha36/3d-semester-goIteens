@@ -1,0 +1,10 @@
+import './header.js';
+import './birth-year.js';
+import './guess-number.js';
+import './calculator.js';
+import './calculator-time.js';
+import './dino.js';
+import './football.js';
+import './highest-number.js';
+import './about-me.js'; 
+import './footer.js'; 
