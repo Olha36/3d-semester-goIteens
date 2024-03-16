@@ -5,12 +5,8 @@ const listContainer = document.querySelector('.list-container');
 const interactiveModal = document.querySelector('.interactive-modal');
 const menuItems = document.querySelectorAll('.more-button-list-item');
 const burgerMenuBtn = document.querySelector('#burger-menu-btn');
-const digitalAnchorLink = document.querySelector('.digital-group');
 const gameAnchorLink = document.querySelector('.game-group');
 const teamAnchorLink = document.querySelector('.team');
-const targetElement = document.getElementById('digital-sections');
-const gamesTargetElement = document.getElementById('games');
-const aboutTargetElement = document.getElementById('about-me');
 const crossMenu =document.querySelector('.cross-menu');
 const modalSwitcher = document.querySelector('.switcher-modal');
 const saveButton = document.querySelector('.save');
@@ -59,21 +55,6 @@ const onSwitcherClick = () => {
   toggleModal();
 }
 
-const digitalLinksHandleClick = (event) => {
-  event.preventDefault();
-  targetElement?.scrollIntoView({ behavior: 'smooth' });
-}
-
-const gameLinksHandleClick = (event) => {
-  event.preventDefault();
-  gamesTargetElement?.scrollIntoView({ behavior: 'smooth' })
-}
-
-const ourTeamHandleClick = (event) => {
-  event.preventDefault();
-  aboutTargetElement.scrollIntoView( {behavior: 'smooth' });
-}
-
 const saveUserName = () => {
   userNameList.forEach(user => {
     user.textContent = document.querySelector('.input-name').value + '!'
@@ -95,15 +76,11 @@ switchers.forEach(switcher => {
 })
 
 thanksCloseButton?.addEventListener('click', subscriptionModalToggle);
-digitalAnchorLink?.addEventListener('click', digitalLinksHandleClick);
-gameAnchorLink?.addEventListener('click', gameLinksHandleClick);
-teamAnchorLink?.addEventListener('click', ourTeamHandleClick);
 burgerMenuBtn?.addEventListener('click', onMoreButtonClick);
 interactiveGroupButton?.addEventListener('click', updatePosition);
 menuItems.forEach((item)=> {
   item.addEventListener('click', updateMobilePosition);
 })
-// menuItems?.addEventListener('click', updateMobilePosition);
 crossMenu?.addEventListener('click', onSwitcherClick);
 saveButton?.addEventListener('click', onSaveButtonClick);
 
