@@ -1,96 +1,110 @@
 const switchers = document.querySelectorAll('.switcher');
-const users = document.querySelectorAll('.user-name');
+const userNameList = document.querySelectorAll('.user-name');
+const interactiveGroupButton = document.querySelector('.interactive-group');
+const listContainer = document.querySelector('.list-container');
+const interactiveModal = document.querySelector('.interactive-modal');
+const menuItems = document.querySelectorAll('.more-button-list-item');
+const burgerMenuBtn = document.querySelector('#burger-menu-btn');
+const digitalAnchorLink = document.querySelector('.digital-group');
+const gameAnchorLink = document.querySelector('.game-group');
+const teamAnchorLink = document.querySelector('.team');
+const targetElement = document.getElementById('digital-sections');
+const gamesTargetElement = document.getElementById('games');
+const aboutTargetElement = document.getElementById('about-me');
+const crossMenu =document.querySelector('.cross-menu');
+const modalSwitcher = document.querySelector('.switcher-modal');
+const saveButton = document.querySelector('.save');
+const thanksCloseButton = document.querySelector('.thanks-cross-menu');
 
-document.querySelector('.more-button').addEventListener('click', function () {
-  document.querySelector('.list-container').classList.toggle('active');
-});
 
-// document.querySelector('.interactive-group').addEventListener('click', function () {
-//   document.querySelector('.interactive-modal').classList.toggle('interactive-active');
-// })
-
-const groupItems = document.querySelector('.interactive-group');
+const onMoreButtonClick = () => {
+ if(listContainer) {
+  listContainer.classList.toggle('active');
+ }
+}
 
 const updatePosition = () => {
-  modalActive.classList.toggle('interactive-active');
+  const groupItemsRect = interactiveGroupButton.getBoundingClientRect();
 
-  const groupItemsRect = groupItems.getBoundingClientRect();
-
-  modalActive.style.left = `${groupItemsRect.left}px`;
-  modalActive.style.top = `${groupItemsRect.bottom}`
+  if(interactiveModal) {
+    interactiveModal.classList.toggle('interactive-active');
+    interactiveModal.style.left = `${groupItemsRect.left}px`;
+    interactiveModal.style.top = `${groupItemsRect.bottom}px`
+  }
 }
-groupItems.addEventListener('click', updatePosition);
 
-const modalActive = document.querySelector('.interactive-modal');
-const listItem = document.querySelector('.more-button-list-item');
+const updateMobilePosition = (event) => {
+  const menuItem = event.target;
+  const listItemRect = menuItem.getBoundingClientRect();
 
-// Function to update the position of the modal
-const updateMobilePosition = () => {
-  modalActive.classList.toggle('interactive-active');
-
-  const listItemRect = listItem.getBoundingClientRect();
-  modalActive.style.left = `${listItemRect.left}px`; 
-  modalActive.style.top = `${listItemRect.bottom}px`; 
+  if(interactiveModal) {
+    interactiveModal.classList.toggle('interactive-active');
+    interactiveModal.style.left = `${listItemRect.left}px`; 
+    interactiveModal.style.top = `${listItemRect.bottom}px`; 
+  }
 };
 
-listItem.addEventListener('click', updateMobilePosition);
 
-
-const handleClick = (event) => {
-  document.querySelector('.switcher-circle-night').classList.toggle('switcher-active'); 
-  document.querySelector('.switcher-circle-day').classList.toggle('switcher-non-active'); 
-  document.querySelector('.switcher-modal').classList.toggle('modal-active'); 
+const toggleSwitcher = () => {
+  document.querySelector('.switcher-circle-night')?.classList?.toggle('switcher-active'); 
+  document.querySelector('.switcher-circle-day')?.classList?.toggle('switcher-non-active');
 }
 
-switchers.forEach(switcher => {
-  switcher.addEventListener('click', handleClick)
-})
+const toggleModal = () => {
+  modalSwitcher?.classList?.toggle('modal-active'); 
+}
 
-document.querySelector('.cross-menu').addEventListener('click', function() {
-  document.querySelector('.switcher-modal').classList.remove('modal-active'); 
-})
-
-document.querySelector('.save').addEventListener('click', function() {
-  users.forEach(user => {
-    user.textContent = document.querySelector('.input-name').value + '!'
-  })
-  
-  document.querySelector('.input-name').value = "";
-  document.querySelector('.thanks-subscription').classList.toggle('thanks-active'); 
-})
-
-document.querySelector('.thanks-cross-menu').addEventListener('click', function() {
-  document.querySelector('.thanks-subscription').classList.toggle('thanks-active'); 
-})
-
-const smartLinks = document.querySelector('.digital-group');
-const gameGroup = document.querySelector('.game-group');
-const ourTeam = document.querySelector('.team');
-
+const onSwitcherClick = () => {
+  toggleSwitcher()
+  toggleModal();
+}
 
 const digitalLinksHandleClick = (event) => {
   event.preventDefault();
-
-  const targetElement = document.getElementById('digital-sections');
-  targetElement.scrollIntoView({ behavior: 'smooth' });
+  targetElement?.scrollIntoView({ behavior: 'smooth' });
 }
 
 const gameLinksHandleClick = (event) => {
   event.preventDefault();
-  
-  const gamesTargetElement = document.getElementById('games');
-  gamesTargetElement.scrollIntoView({ behavior: 'smooth' })
+  gamesTargetElement?.scrollIntoView({ behavior: 'smooth' })
 }
 
 const ourTeamHandleClick = (event) => {
   event.preventDefault();
-
-  const aboutTargetElement = document.getElementById('about-me');
   aboutTargetElement.scrollIntoView( {behavior: 'smooth' });
 }
 
-smartLinks.addEventListener('click', digitalLinksHandleClick);
-gameGroup.addEventListener('click', gameLinksHandleClick);
-ourTeam.addEventListener('click', ourTeamHandleClick)
+const saveUserName = () => {
+  userNameList.forEach(user => {
+    user.textContent = document.querySelector('.input-name').value + '!'
+})};
+
+const subscriptionModalToggle = () => {
+  document.querySelector('.thanks-subscription')?.classList.toggle('thanks-active'); 
+}
+
+const onSaveButtonClick = () => {
+  saveUserName();
+  
+  document.querySelector('.input-name').value = "";
+  subscriptionModalToggle();
+}
+
+switchers.forEach(switcher => {
+  switcher.addEventListener('click', onSwitcherClick);
+})
+
+thanksCloseButton?.addEventListener('click', subscriptionModalToggle);
+digitalAnchorLink?.addEventListener('click', digitalLinksHandleClick);
+gameAnchorLink?.addEventListener('click', gameLinksHandleClick);
+teamAnchorLink?.addEventListener('click', ourTeamHandleClick);
+burgerMenuBtn?.addEventListener('click', onMoreButtonClick);
+interactiveGroupButton?.addEventListener('click', updatePosition);
+menuItems.forEach((item)=> {
+  item.addEventListener('click', updateMobilePosition);
+})
+// menuItems?.addEventListener('click', updateMobilePosition);
+crossMenu?.addEventListener('click', onSwitcherClick);
+saveButton?.addEventListener('click', onSaveButtonClick);
 
 
