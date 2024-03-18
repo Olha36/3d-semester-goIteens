@@ -1,7 +1,8 @@
-document.querySelector('.search-number').addEventListener('click', function() {
-  let inputGuessNumber = parseInt(document.querySelector('.guess-wrapper input').value);
+const guessNumberInput = document.querySelector('.search-number');
 
-  // Clear the input field
+guessNumberInput.addEventListener('click', function() {
+  let guessNumberValue = parseInt(guessNumberInput.value);
+
   document.querySelector('.guess-wrapper input').value = "";
 
   function randomNum() {
@@ -10,7 +11,7 @@ document.querySelector('.search-number').addEventListener('click', function() {
 
   let guessNumber = randomNum();
 
-  if (guessNumber === inputGuessNumber) {
+  if (guessNumber === guessNumberValue) {
       document.querySelector('.number-content').textContent = `Ви виграли! Число - ${guessNumber}`;
       document.querySelector('.number-content').style.color = '#039900';
   } else {
