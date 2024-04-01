@@ -2,14 +2,17 @@ const dino = document.querySelector('.dino');
 const cactus = document.querySelector('.cactus');
 const startGame = document.querySelector('.start-game');
 const reset = document.querySelector('.reset-game');
+const gameOver = document.querySelector('.game-over');
+
+function removeJump() {
+  dino.classList.remove('jump');
+}
 
 function jump() {
   if(dino.classList != "jump") {
     dino.classList.add('jump');
   }
-  setTimeout(function () {
-    dino.classList.remove('jump');
-  }, 300)
+  setTimeout(removeJump, 300)
 }
 
 function slide() {
@@ -18,38 +21,33 @@ function slide() {
   } 
 }
 
-
-
-const isAlive = setInterval(function() {
+function getIntersections() {
   const dinoRect = dino.getBoundingClientRect();
   const cactusRect = cactus.getBoundingClientRect();
 
   if (cactusRect.left < dinoRect.right &&
     cactusRect.top < dinoRect.bottom &&
     !dino.classList.contains('jump')) {
-  document.querySelector('.game-over').textContent = 'Game is over';
-  document.querySelector('.cactus').classList.remove('slide');
+    gameOver.textContent = 'Game is over';
+    cactus.classList.remove('slide');
+  }
 }
-}, 10)
 
+const isAlive = setInterval(getIntersections, 10);
 
-
-document.addEventListener("keydown", function(event) {
+function spaceBarKey(event) {
   if(event.key == ' ' || event.key == 'Spacebar') {
     jump();
   }
- 
-})
+}
 
-startGame.addEventListener('click', function() {
- slide();
-})
-
-startGame.addEventListener('touchstart', function() {
-  jump();
-})
-reset.addEventListener('click', function() {
+function resetOperation() {
   slide();
-  document.querySelector('.game-over').textContent = '';
-})
+  gameOver.textContent = '';
+}
+
+document.addEventListener("keydown", spaceBarKey);
+startGame.addEventListener('click', slide);
+startGame.addEventListener('touchstart', jump);
+reset.addEventListener('click', resetOperation);
 
