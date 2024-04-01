@@ -1,8 +1,12 @@
-document.querySelector('.subscribe').addEventListener('click', function() {
-  document.querySelector('.email-subscription').classList.toggle('email-active'); 
-  document.querySelector('.input-footer').value = '';
-});
+const subscribeButton = document.querySelector('.subscribe');
+const subscribeModalWindow = document.querySelector('.email-subscription');
+const footerInput = document.querySelector('.input-footer');
+const closeEmailModalWindow = document.querySelector('.email-cross-menu');
 
-document.querySelector('.email-cross-menu').addEventListener('click', function() {
-  document.querySelector('.email-subscription').classList.remove('email-active');
-});
+function showModalWindow() {
+  subscribeModalWindow.classList.toggle('email-active'); 
+  footerInput.value = '';
+}
+
+subscribeButton.addEventListener('click', showModalWindow);
+closeEmailModalWindow.addEventListener('click', showModalWindow);
