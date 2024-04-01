@@ -1,45 +1,57 @@
+const computerScoreTextElement = document.querySelector('.computer-score');
+const userScoreTextElement = document.querySelector('.user-score');
+const showWinner = document.querySelector('.winner');
+const showComputerChoice = document.querySelector('.computer-variant');
+
 let userScore = 0;
 let computerScore = 0;
 
-document.querySelector('.computer-score').textContent = computerScore;
-document.querySelector('.user-score').textContent = userScore;
-
 function updateComputerScore() {
-  document.querySelector('.computer-score').textContent = computerScore;
+  computerScoreTextElement.textContent = computerScore;
 }
 
 function updateUserScore() {
-  document.querySelector('.user-score').textContent = userScore;
+  userScoreTextElement.textContent = userScore;
 }
 
-function play(userChoice) {
-  const computerChoices = ['stone', 'scissors', 'paper'];
+function showTextContent() {
+  this.textContent = `${computerChoice}`;
+  this.textContent = `Варіант комп’ютера`
+}
 
+
+
+function play(userChoice) {
+  const computerChoices = ['камінь', 'ножиці', 'папір'];
   const computerChoice = computerChoices[Math.floor(Math.random() * computerChoices.length)];
   
-  if((userChoice === 'stone' && computerChoice === 'scissors') ||
-     (userChoice === 'scissors' && computerChoice === 'paper') ||
-     (userChoice === 'paper' && computerChoice === 'stone')) {
-      document.querySelector('.winner').textContent = 'Ви виграли раунд!'
-      document.querySelector('.winner').style.color = '#039900';
+  if((userChoice === 'камінь' && computerChoice === 'ножиці') ||
+     (userChoice === 'ножиці' && computerChoice === 'папір') ||
+     (userChoice === 'папір' && computerChoice === 'камінь')) {
+      showWinner.textContent = 'Ви виграли раунд!'
+      showWinner.style.color = '#039900';
       userScore++;
       updateUserScore();
   } else if (userChoice === computerChoice) {
-    document.querySelector('.winner').textContent = `Нічия!`
-    document.querySelector('.winner').style.color = 'black';
+    showWinner.textContent = `Нічия!`
+    showWinner.style.color = 'black';
   } else {
-    document.querySelector('.winner').textContent = `Комп'ютер виграв раунд!`
-    document.querySelector('.winner').style.color = 'red';
+    showWinner.textContent = `Комп'ютер виграв раунд!`
+    showWinner.style.color = 'red';
     computerScore++;
     updateComputerScore();
   }
+
+  function displayComputerChoice() {
+    showComputerChoice.textContent = `${computerChoice}`;
+  }
   
-  document.querySelector('.computer-variant').addEventListener('click', function() {
-    this.textContent = `${computerChoice}`
-  })
-  document.querySelector('.computer-variant').addEventListener('blur', function() {
-    this.textContent = `Варіант комп’ютера`
-  })
+  function resetComputerChoice() {
+    showComputerChoice.textContent = `Варіант комп’ютера`;
+  }
+
+  showComputerChoice.addEventListener('click', displayComputerChoice);
+  showComputerChoice.addEventListener('blur', resetComputerChoice);
 
 }
 
