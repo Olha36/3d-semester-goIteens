@@ -23,10 +23,7 @@ function showTextContent() {
 
 function play(userChoice) {
   const computerChoices = ['камінь', 'ножиці', 'папір'];
-
   const computerChoice = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-  console.log('User Choice:', userChoice);
-  console.log('Computer Choice:', computerChoice);
   
   if((userChoice === 'камінь' && computerChoice === 'ножиці') ||
      (userChoice === 'ножиці' && computerChoice === 'папір') ||
