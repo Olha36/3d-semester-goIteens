@@ -11,7 +11,6 @@ function randomNum() {
 
 function resetGame() {
     randomNumber = randomNum();
-    console.log(randomNumber);
     showResultParagraph.textContent = "";
     showResultParagraph.style.color = 'black';
 }
