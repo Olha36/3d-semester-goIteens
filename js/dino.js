@@ -7,7 +7,7 @@ let intervalID = null;
 
 function startGame() {
   if (!intervalID) {
-    intervalID = setInterval(getIntersections, 20);
+    intervalID = setInterval(getIntersections, 10);
   }
   cactusRunner();
 }
@@ -53,6 +53,7 @@ function resetOperation() {
   gameOverMessage.textContent = "";
 }
 
+document.addEventListener('touchstart', jump);
 document.addEventListener("keydown", jump);
 startGameBtn.addEventListener("click", startGame);
 resetBtn.addEventListener("click", resetOperation);
