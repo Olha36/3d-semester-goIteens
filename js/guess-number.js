@@ -1,12 +1,20 @@
 const searchIcon = document.querySelector('.search-number');
 const guessNumberInput = document.querySelector('.guess-wrapper input');
 const showResultParagraph = document.querySelector('.number-content');
-const randomNumber = randomNum();
+const resetButton = document.querySelector('.play-again');
+
+let randomNumber = randomNum();
 
 function randomNum() {
     return Math.round(Math.random() * (100 - 1) + 1);
 }
-console.log(randomNumber);
+
+function resetGame() {
+    randomNumber = randomNum();
+    console.log(randomNumber);
+    showResultParagraph.textContent = "";
+    showResultParagraph.style.color = 'black';
+}
 
 function checkGuessedNumber() {
     let guessNumberValue = parseInt(guessNumberInput.value);
@@ -22,4 +30,5 @@ function checkGuessedNumber() {
 }
 
 searchIcon.addEventListener('click', checkGuessedNumber);
+resetButton.addEventListener('click', resetGame);
 
