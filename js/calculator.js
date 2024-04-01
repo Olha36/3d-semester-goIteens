@@ -1,29 +1,36 @@
-const buttonGroup = document.querySelectorAll('.button-group');
 const firstNum = document.querySelector('.first-number');
 const secondNum = document.querySelector('.second-number');
 const resultButton = document.querySelector('.result');
-
+const additionButton = document.querySelector('.addition');
+const subtractionButton = document.querySelector('.subtraction');
+const multiplicationButton = document.querySelector('.multiplication');
+const divisionButton = document.querySelector('.division');
+const equalsButton = document.querySelector('.equals');
+const resetButton = document.querySelector('.reset');
 
 let currentOperation = 'number';
 
+function differentiateOperation() {
+  currentOperation = 'number';
+}
 
-document.querySelector('.addition').addEventListener('click', function() {
+function additionOperation() {
   currentOperation = 'addition';
-})
+}
 
-document.querySelector('.subtraction').addEventListener('click', function() {
+function subtractionOperation() {
   currentOperation = 'subtraction';
-})
+}
 
-document.querySelector('.multiplication').addEventListener('click', function() {
+function multiplicationOperation() {
   currentOperation = 'multiplication';
-})
+}
 
-document.querySelector('.division').addEventListener('click', function() {
+function divisionOperation() {
   currentOperation = 'division';
-})
+}
 
-document.querySelector('.equals').addEventListener('click', function() {
+function calculatorOperations() {
   if  (currentOperation === 'addition') {
     let result = Number(firstNum.value) + Number(secondNum.value);
     resultButton.textContent = result;
@@ -36,16 +43,19 @@ document.querySelector('.equals').addEventListener('click', function() {
   } else if(currentOperation === 'division') {
     let result = Number(firstNum.value) / Number(secondNum.value);
     resultButton.textContent = result;
-  } else {
-  }
-})
+  } 
+}
 
-firstNum.addEventListener('input', function() {
-  currentOperation = 'number';
-})
-
-document.querySelector('.reset').addEventListener('click', function() {
+function resetOperation() {
   firstNum.value = '';
   secondNum.value = '';
   resultButton.textContent = '';
-})
+}
+
+additionButton.addEventListener('click', additionOperation);
+subtractionButton.addEventListener('click', subtractionOperation);
+multiplicationButton.addEventListener('click', multiplicationOperation);
+divisionButton.addEventListener('click', divisionOperation);
+equalsButton.addEventListener('click', calculatorOperations);
+firstNum.addEventListener('input', differentiateOperation);
+resetButton.addEventListener('click', resetOperation);
