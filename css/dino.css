@@ -16,6 +16,9 @@
   background-image: url('../img/dino.png');
   background-size: 50px 50px;
 }
+.game-over {
+  color: red;
+}
 .jump {
   animation: jump 0.3s linear;
 }
@@ -23,14 +26,8 @@
   0% {
     top: 80px; 
   }
-  30% {
-    top: 70px; 
-  }
   50% {
-    top: 30px; 
-  }
-  80% {
-    top: 70px; 
+    top: 20px; 
   }
   100% {
     top: 80px; 
@@ -67,7 +64,7 @@
 }
 @keyframes block {
   0% {
-    left: 580px;
+    left: calc(100% - 20px);
   }
   100% {
     left: -20px;

@@ -1,53 +1,58 @@
-const dino = document.querySelector('.dino');
-const cactus = document.querySelector('.cactus');
-const startGame = document.querySelector('.start-game');
-const reset = document.querySelector('.reset-game');
-const gameOver = document.querySelector('.game-over');
+const dino = document.querySelector(".dino");
+const cactus = document.querySelector(".cactus");
+const startGameBtn = document.querySelector(".start-game");
+const resetBtn = document.querySelector(".reset-game");
+const gameOverMessage = document.querySelector(".game-over");
+let intervalID = null;
 
-function removeJump() {
-  dino.classList.remove('jump');
-}
-
-function jump() {
-  if(dino.classList != "jump") {
-    dino.classList.add('jump');
+function startGame() {
+  if (!intervalID) {
+    intervalID = setInterval(getIntersections, 20);
   }
-  setTimeout(removeJump, 300)
+  cactusRunner();
 }
 
-function slide() {
-  if(cactus.classList != 'slide') {
-    cactus.classList.add('slide');
-  } 
+function stopGame() {
+  if (intervalID) {
+    clearInterval(intervalID);
+    intervalID = null;
+  }
+  cactus.classList.remove("slide");
+}
+
+function jump(event) {
+  if (event.key == " " || event.key == "Spacebar") {
+    dino.classList.add("jump");
+    setTimeout(() => {
+      dino.classList.remove("jump");
+    }, 300);
+  }
+}
+
+function cactusRunner() {
+  if (cactus.classList != "slide") {
+    cactus.classList.add("slide");
+  }
 }
 
 function getIntersections() {
   const dinoRect = dino.getBoundingClientRect();
   const cactusRect = cactus.getBoundingClientRect();
+  const isDinoBefore = cactusRect.left < dinoRect.right;
+  const isDinoAbove = cactusRect.top < dinoRect.bottom;
 
-  if (cactusRect.left < dinoRect.right &&
-    cactusRect.top < dinoRect.bottom &&
-    !dino.classList.contains('jump')) {
-    gameOver.textContent = 'Game is over';
-    cactus.classList.remove('slide');
-  }
-}
-
-const isAlive = setInterval(getIntersections, 10);
-
-function spaceBarKey(event) {
-  if(event.key == ' ' || event.key == 'Spacebar') {
-    jump();
+  if (isDinoBefore && isDinoAbove) {
+    gameOverMessage.textContent = "Game is over";
+    stopGame();
   }
 }
 
 function resetOperation() {
-  slide();
-  gameOver.textContent = '';
+  stopGame();
+  startGame();
+  gameOverMessage.textContent = "";
 }
 
-document.addEventListener("keydown", spaceBarKey);
-startGame.addEventListener('click', slide);
-startGame.addEventListener('touchstart', jump);
-reset.addEventListener('click', resetOperation);
-
+document.addEventListener("keydown", jump);
+startGameBtn.addEventListener("click", startGame);
+resetBtn.addEventListener("click", resetOperation);
