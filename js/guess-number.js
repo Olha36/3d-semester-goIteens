@@ -1,22 +1,25 @@
-const guessNumberInput = document.querySelector('.search-number');
+const searchIcon = document.querySelector('.search-number');
+const guessNumberInput = document.querySelector('.guess-wrapper input');
+const showResultParagraph = document.querySelector('.number-content');
+const randomNumber = randomNum();
 
-guessNumberInput.addEventListener('click', function() {
-  let guessNumberValue = parseInt(guessNumberInput.value);
+function randomNum() {
+    return Math.round(Math.random() * (100 - 1) + 1);
+}
+console.log(randomNumber);
 
-  document.querySelector('.guess-wrapper input').value = "";
-
-  function randomNum() {
-      return Math.round(Math.random() * (100 - 1) + 1);
-  }
-
-  let guessNumber = randomNum();
-
-  if (guessNumber === guessNumberValue) {
-      document.querySelector('.number-content').textContent = `Ви виграли! Число - ${guessNumber}`;
-      document.querySelector('.number-content').style.color = '#039900';
-  } else {
-      document.querySelector('.number-content').textContent = `Ви програли! Число - ${guessNumber}`;
-      document.querySelector('.number-content').style.color = 'red';
-  }
+function checkGuessedNumber() {
+    let guessNumberValue = parseInt(guessNumberInput.value);
+    guessNumberInput.value = "";
   
-});
+    if (randomNumber === guessNumberValue) {
+      showResultParagraph.textContent = `Ви виграли! Число - ${randomNumber}`;
+      showResultParagraph.style.color = '#039900';
+    } else {
+      showResultParagraph.textContent = `Ви програли! Число - ${randomNumber}`;
+      showResultParagraph.style.color = 'red';
+    }
+}
+
+searchIcon.addEventListener('click', checkGuessedNumber);
+
