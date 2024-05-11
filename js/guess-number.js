@@ -26,8 +26,17 @@ function checkGuessedNumber() {
       showResultParagraph.textContent = `Ви програли! Число - ${randomNumber}`;
       showResultParagraph.style.color = 'red';
     }
+
+    if(guessNumberInput.value === '') {
+      showResultParagraph.textContent = 'Введіть будь-яке число від 1 до 100'
+     }
+}
+
+function onInputChange() {
+ showResultParagraph.textContent = '';
 }
 
 searchIcon.addEventListener('click', checkGuessedNumber);
 resetButton.addEventListener('click', resetGame);
+guessNumberInput.addEventListener('focus', onInputChange)
 

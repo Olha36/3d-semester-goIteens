@@ -1,5 +1,6 @@
 const searchButton = document.querySelector('.search');
-const birthYearInput = document.querySelector('.input-wrapper input');
+const birthYearInput = document.querySelector('.birth-year');
+console.log(birthYearInput);
 const yearTextContent = document.querySelector('.year-heading');
 
 function isLeapYear(year) {
@@ -19,6 +20,16 @@ function checkIsLeapYear() {
     yearTextContent.textContent = `Ви народилися не у високосний ${year} рік!`
     yearTextContent.style.color = 'red';
   }
+
+  if(year === '') {
+    yearTextContent.textContent = `Введіть рік народження!`
+    yearTextContent.style.color = 'black';
+  } 
 };
 
+function onInputClick() {
+  yearTextContent.textContent = '';
+}
+
 searchButton.addEventListener('click', checkIsLeapYear);
+birthYearInput.addEventListener('focus', onInputClick)
