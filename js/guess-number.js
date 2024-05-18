@@ -17,19 +17,23 @@ function resetGame() {
 
 function checkGuessedNumber() {
     let guessNumberValue = parseInt(guessNumberInput.value);
-    guessNumberInput.value = "";
-  
-    if (randomNumber === guessNumberValue) {
-      showResultParagraph.textContent = `Ви виграли! Число - ${randomNumber}`;
-      showResultParagraph.style.color = '#039900';
-    } else {
-      showResultParagraph.textContent = `Ви програли! Число - ${randomNumber}`;
-      showResultParagraph.style.color = 'red';
+
+    if (isNaN(guessNumberValue)) {
+        showResultParagraph.textContent = 'Введіть будь-яке число від 1 до 100';
+        showResultParagraph.style.color = 'black';
+        guessNumberInput.value = "";
+        return;  
     }
 
-    if(guessNumberInput.value === '') {
-      showResultParagraph.textContent = 'Введіть будь-яке число від 1 до 100'
-     }
+    guessNumberInput.value = "";
+
+    if (randomNumber === guessNumberValue) {
+        showResultParagraph.textContent = `Ви виграли! Число - ${randomNumber}`;
+        showResultParagraph.style.color = '#039900';
+    } else {
+        showResultParagraph.textContent = `Ви програли! Число - ${randomNumber}`;
+        showResultParagraph.style.color = 'red';
+    }
 }
 
 function onInputChange() {
