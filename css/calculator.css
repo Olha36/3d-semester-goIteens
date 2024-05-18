@@ -29,10 +29,13 @@
   background-color: #000;
   color: #fff;
 }
+.calculator-button:active {
+  box-shadow: 0 0 5px 3px lightgreen;
+}
 button {
   cursor: pointer;
 }
-/* .equals-button {} */
+
 .equals {
   width: 27px;
 }
