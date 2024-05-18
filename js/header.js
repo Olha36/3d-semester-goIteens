@@ -11,6 +11,7 @@ const crossMenu =document.querySelector('.cross-menu');
 const modalSwitcher = document.querySelector('.switcher-modal');
 const saveButton = document.querySelector('.save');
 const thanksCloseButton = document.querySelector('.thanks-cross-menu');
+const closeInteractiveModal = document.querySelector(".modal-cross");
 
 
 const onMoreButtonClick = () => {
@@ -38,6 +39,7 @@ const updateMobilePosition = (event) => {
     interactiveModal.style.left = `${listItemRect.left}px`; 
     interactiveModal.style.top = `${listItemRect.bottom}px`; 
   }
+  console.log('mobile wondow');
 };
 
 
@@ -75,6 +77,11 @@ switchers.forEach(switcher => {
   switcher.addEventListener('click', onSwitcherClick);
 })
 
+const onClickClose = () => {
+  interactiveModal.classList.toggle('interactive-active');
+  console.log('hi');
+};
+
 thanksCloseButton?.addEventListener('click', subscriptionModalToggle);
 burgerMenuBtn?.addEventListener('click', onMoreButtonClick);
 interactiveGroupButton?.addEventListener('click', updatePosition);
@@ -83,5 +90,4 @@ menuItems.forEach((item)=> {
 })
 crossMenu?.addEventListener('click', onSwitcherClick);
 saveButton?.addEventListener('click', onSaveButtonClick);
-
-
+closeInteractiveModal.addEventListener("click", onClickClose);

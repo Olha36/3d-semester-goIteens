@@ -72,7 +72,7 @@ header {
 .interactive-modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   flex-direction: column;
   width: 160px;
   height: 153px;
@@ -195,6 +195,33 @@ header {
   display: block;
   background-color: black;
 }
+.modal-cross {
+  cursor: pointer;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  width: 30px;
+  height: 21px;
+  opacity: 0.3;
+}
+.modal-cross:hover {
+  opacity: 1;
+}
+.modal-cross:before, .modal-cross:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 20px;
+  width: 2px;
+  background-color: #333;
+}
+.modal-cross:before {
+  transform: rotate(45deg);
+}
+.modal-cross:after {
+  transform: rotate(-45deg);
+}
+
 .thanks-subscription,
 .email-subscription {
   display: none;
@@ -238,7 +265,6 @@ header {
 .email-active {
   display: block;
 }
-
 @media screen and (max-width: 992px) {
   .switcher-modal {
     left: 4%;
@@ -334,10 +360,8 @@ header {
     transform-origin: bottom right;
     transition: all 0.3s ease 0.1s;
   }
-  .more-button-list li {
-    opacity: 0;
-  }
-  .more-button-list-item {
+  .more-button-list-item,
+  .more-button-list-switcher {
     display: flex;
     align-items: center;
     color: #1c3991;
@@ -347,6 +371,9 @@ header {
     position: relative;
     transition: 0.2s ease-in;
     transform: translatex(-10px);
+  }
+  .more-button-list-switcher > .switcher {
+    margin: 0 auto;
   }
   .more-button-list-item:hover {
     color: #5c67ff;
