@@ -361,7 +361,7 @@ header {
     transition: all 0.3s ease 0.1s;
   }
   .more-button-list-item,
-  .more-button-list-switcher {
+  .more-button-list-item-interactive {
     display: flex;
     align-items: center;
     color: #1c3991;

@@ -3,7 +3,7 @@ const userNameList = document.querySelectorAll('.user-name');
 const interactiveGroupButton = document.querySelector('.interactive-group');
 const listContainer = document.querySelector('.list-container');
 const interactiveModal = document.querySelector('.interactive-modal');
-const menuItems = document.querySelectorAll('.more-button-list-item');
+const menuItems = document.querySelectorAll('.more-button-list-item-interactive');
 const burgerMenuBtn = document.querySelector('#burger-menu-btn');
 const gameAnchorLink = document.querySelector('.game-group');
 const teamAnchorLink = document.querySelector('.team');
@@ -39,7 +39,6 @@ const updateMobilePosition = (event) => {
     interactiveModal.style.left = `${listItemRect.left}px`; 
     interactiveModal.style.top = `${listItemRect.bottom}px`; 
   }
-  console.log('mobile wondow');
 };
 
 
@@ -79,7 +78,6 @@ switchers.forEach(switcher => {
 
 const onClickClose = () => {
   interactiveModal.classList.toggle('interactive-active');
-  console.log('hi');
 };
 
 thanksCloseButton?.addEventListener('click', subscriptionModalToggle);
