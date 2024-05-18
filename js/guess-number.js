@@ -30,6 +30,10 @@ function checkGuessedNumber() {
     if (randomNumber === guessNumberValue) {
         showResultParagraph.textContent = `Ви виграли! Число - ${randomNumber}`;
         showResultParagraph.style.color = '#039900';
+    } else if(guessNumberValue >= 100) {
+        showResultParagraph.textContent = 'Ви загадали число більше 100. Загадайте число в межах 1-100'
+    } else if(guessNumberValue <= 0) {
+        showResultParagraph.textContent = 'Ви загадали число менше 1. Загадайте число в межах 1-100'
     } else {
         showResultParagraph.textContent = `Ви програли! Число - ${randomNumber}`;
         showResultParagraph.style.color = 'red';
