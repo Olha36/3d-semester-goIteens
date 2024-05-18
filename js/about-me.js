@@ -23,3 +23,5 @@ let swiperCards = new Swiper(".card-content", {
     },
   },
 });
+
+

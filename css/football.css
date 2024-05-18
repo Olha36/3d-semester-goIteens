@@ -4,7 +4,7 @@
   height: 220px;
   border-radius: 37px;
   border: 2px;
-  background-color:  #5ABB58;
+  background: linear-gradient(135deg, rgb(82, 229, 231) 10%, rgb(19, 12, 183) 100%);
   margin: auto;
 }
 .ball {

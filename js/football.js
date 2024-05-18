@@ -22,7 +22,7 @@ function changeColor() {
   let index = 0;
 
   setInterval(() => {
-    footballWrapper.style.backgroundColor = colors[index];
+    footballWrapper.style.background = colors[index];
     index = (index + 1) % colors.length;
   }, 3000);
 }

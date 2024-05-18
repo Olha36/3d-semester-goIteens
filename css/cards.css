@@ -81,21 +81,32 @@ img {
   margin: 5px 0;
 }
 
+.card-image {
+  position: relative;
+  overflow: hidden; 
+}
+
+.card-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.card-image:hover .card-img {
+  transform: scale(1.1);
+}
+.card-image:hover {
+  width: 40%;
+  height: auto;
+}
+
 
 /* Swiper class */
 .swiper-button-prev:after,
 .swiper-button-next:after {
   content: "";
 }
-/* 
-.swiper-button-prev,
-.swiper-button-next {
-  width: initial;
-  height: initial;
-  font-size: 3rem;
-  color: var(--second-color);
-  display: none;
-} */
 
 .swiper-button-prev {
   left: 10%;
