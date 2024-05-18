@@ -11,7 +11,6 @@
   width: 50px;
   height: 50px; 
   position: relative;
-  /* top: 150px; */
   top: 130px;
   background-image: url('../img/dino.png');
   background-size: 50px 50px;
@@ -41,7 +40,6 @@
   left: 580px;
   background-image: url('../img/cactus.jpeg');
   background-size: 20px 40px;
-  
 }
 .slide {
   animation: block 1s infinite linear;
@@ -95,4 +93,19 @@
   .dino-notifications {
     flex-wrap: nowrap;
   }
+  .jump {
+    animation: jump 0.3s linear;
+  }
+  @keyframes jump {
+    0% {
+      top: 30px; 
+    }
+    50% {
+      top: 10px; 
+    }
+    100% {
+      top: 30px; 
+    }
+  }
+  
 }
