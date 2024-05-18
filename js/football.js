@@ -10,6 +10,20 @@ function playFootball(event) {
   ball.style.transition = 'transform 0.5s ease';
 }
 
+function changeColor() {
+  let colors = ['#159ec6','#0c728f', '#45c4e9']; //
+  let index = 0;
+
+  colors.forEach((color, i) => {
+      setInterval(() => {
+      footballWrapper.style.backgroundColor = color;
+      index = (index + 1) % colors.length;
+      
+    }, 3000 * (i + 1));
+  });
+
+}
+changeColor();
 footballWrapper.addEventListener('click', playFootball);
 
 
