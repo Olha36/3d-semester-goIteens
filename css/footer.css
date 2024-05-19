@@ -9,6 +9,9 @@ footer {
   max-width: 95%;
   margin: auto;
 }
+.footer-dark {
+  color: #4964f1
+}
 .copyright > p {
   margin-top: 10px;
   font-size: 10px;

@@ -12,7 +12,9 @@ const modalSwitcher = document.querySelector('.switcher-modal');
 const saveButton = document.querySelector('.save');
 const thanksCloseButton = document.querySelector('.thanks-cross-menu');
 const closeInteractiveModal = document.querySelector(".modal-cross");
-
+const cactusDarkTheme = document.querySelector(".cactus");
+const footballWrapper = document.querySelector('.football-wrapper');
+const footerLinks = document.querySelectorAll('.contacts a');
 
 const onMoreButtonClick = () => {
  if(listContainer) {
@@ -53,7 +55,11 @@ const toggleModal = () => {
 
 const onSwitcherClick = () => {
   toggleSwitcher()
-  toggleModal();
+  // toggleModal();
+  document.body.classList.toggle('change-bc-color');
+  cactusDarkTheme.classList.toggle('cactus-dark'); 
+  footballWrapper.classList.toggle('football-wrapper-dark');
+  footerLinks.forEach((link) => link.classList.toggle('footer-dark'));
 }
 
 const saveUserName = () => {

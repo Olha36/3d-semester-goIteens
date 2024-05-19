@@ -38,8 +38,11 @@
   position: relative;
   top: 90px;
   left: 580px;
-  background-image: url('../img/cactus.jpeg');
+  background-image: url('../img/cactus.png');
   background-size: 20px 40px;
+}
+.cactus-dark {
+  background-image: url('../img/cactus-dark-theme.png');
 }
 .slide {
   animation: block 1s infinite linear;

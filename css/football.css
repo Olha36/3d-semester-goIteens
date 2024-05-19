@@ -7,6 +7,9 @@
   background: linear-gradient(135deg, rgb(82, 229, 231) 10%, rgb(19, 12, 183) 100%);
   margin: auto;
 }
+.football-wrapper-dark {
+  background: radial-gradient(circle at 74.2% 50.9%, rgb(14, 72, 222) 5.2%, rgb(3, 22, 65) 75.3%);
+}
 .ball {
    width: 50px; 
   height: 50px; 
