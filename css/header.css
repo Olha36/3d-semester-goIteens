@@ -29,6 +29,9 @@ header {
 .links > p {
   cursor: pointer;
 }
+.links a {
+  color: black;
+}
 .switcher {
   display: flex;
   height: 20px;
