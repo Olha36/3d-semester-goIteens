@@ -1,6 +1,5 @@
 const switchers = document.querySelectorAll('.switcher');
 const crossMenu =document.querySelector('.cross-menu');
-console.log(crossMenu);
 const cactusDarkTheme = document.querySelector(".cactus");
 const footballWrapper = document.querySelector('.football-wrapper');
 const footerLinks = document.querySelectorAll('.contacts a');
@@ -13,7 +12,6 @@ const toggleSwitcher = () => {
 
 const onSwitcherClick = () => {
   toggleSwitcher()
-  // toggleModal();
   document.body.classList.toggle('change-bc-color');
   cactusDarkTheme.classList.toggle('cactus-dark'); 
   footballWrapper.classList.toggle('football-wrapper-dark');

@@ -1,6 +1,5 @@
 const searchButton = document.querySelector('.search');
 const birthYearInput = document.querySelector('.birth-year');
-console.log(birthYearInput);
 const yearTextContent = document.querySelector('.year-heading');
 
 function isLeapYear(year) {
