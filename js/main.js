@@ -1,4 +1,5 @@
 import './header.js';
+import './switcher.js'
 import './birth-year.js';
 import './guess-number.js';
 import './calculator.js';

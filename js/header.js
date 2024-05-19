@@ -1,4 +1,4 @@
-const switchers = document.querySelectorAll('.switcher');
+// const switchers = document.querySelectorAll('.switcher');
 const userNameList = document.querySelectorAll('.user-name');
 const interactiveGroupButton = document.querySelector('.interactive-group');
 const listContainer = document.querySelector('.list-container');
@@ -7,14 +7,14 @@ const menuItems = document.querySelectorAll('.more-button-list-item-interactive'
 const burgerMenuBtn = document.querySelector('#burger-menu-btn');
 const gameAnchorLink = document.querySelector('.game-group');
 const teamAnchorLink = document.querySelector('.team');
-const crossMenu =document.querySelector('.cross-menu');
+// const crossMenu =document.querySelector('.cross-menu');
 const modalSwitcher = document.querySelector('.switcher-modal');
 const saveButton = document.querySelector('.save');
 const thanksCloseButton = document.querySelector('.thanks-cross-menu');
 const closeInteractiveModal = document.querySelector(".modal-cross");
-const cactusDarkTheme = document.querySelector(".cactus");
-const footballWrapper = document.querySelector('.football-wrapper');
-const footerLinks = document.querySelectorAll('.contacts a');
+// const cactusDarkTheme = document.querySelector(".cactus");
+// const footballWrapper = document.querySelector('.football-wrapper');
+// const footerLinks = document.querySelectorAll('.contacts a');
 
 const onMoreButtonClick = () => {
  if(listContainer) {
@@ -44,23 +44,23 @@ const updateMobilePosition = (event) => {
 };
 
 
-const toggleSwitcher = () => {
-  document.querySelector('.switcher-circle-night')?.classList?.toggle('switcher-active'); 
-  document.querySelector('.switcher-circle-day')?.classList?.toggle('switcher-non-active');
-}
+// const toggleSwitcher = () => {
+//   document.querySelector('.switcher-circle-night')?.classList?.toggle('switcher-active'); 
+//   document.querySelector('.switcher-circle-day')?.classList?.toggle('switcher-non-active');
+// }
 
 const toggleModal = () => {
   modalSwitcher?.classList?.toggle('modal-active'); 
 }
 
-const onSwitcherClick = () => {
-  toggleSwitcher()
-  // toggleModal();
-  document.body.classList.toggle('change-bc-color');
-  cactusDarkTheme.classList.toggle('cactus-dark'); 
-  footballWrapper.classList.toggle('football-wrapper-dark');
-  footerLinks.forEach((link) => link.classList.toggle('footer-dark'));
-}
+// const onSwitcherClick = () => {
+//   toggleSwitcher()
+//   // toggleModal();
+//   document.body.classList.toggle('change-bc-color');
+//   cactusDarkTheme.classList.toggle('cactus-dark'); 
+//   footballWrapper.classList.toggle('football-wrapper-dark');
+//   footerLinks.forEach((link) => link.classList.toggle('footer-dark'));
+// }
 
 const saveUserName = () => {
   userNameList.forEach(user => {
@@ -78,9 +78,9 @@ const onSaveButtonClick = () => {
   subscriptionModalToggle();
 }
 
-switchers.forEach(switcher => {
-  switcher.addEventListener('click', onSwitcherClick);
-})
+// switchers.forEach(switcher => {
+//   switcher.addEventListener('click', onSwitcherClick);
+// })
 
 const onClickClose = () => {
   interactiveModal.classList.toggle('interactive-active');
@@ -92,6 +92,6 @@ interactiveGroupButton?.addEventListener('click', updatePosition);
 menuItems.forEach((item)=> {
   item.addEventListener('click', updateMobilePosition);
 })
-crossMenu?.addEventListener('click', onSwitcherClick);
+// crossMenu?.addEventListener('click', onSwitcherClick);
 saveButton?.addEventListener('click', onSaveButtonClick);
 closeInteractiveModal.addEventListener("click", onClickClose);

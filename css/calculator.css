@@ -6,6 +6,7 @@
   background-color: #D7D7D7;
   box-shadow: 3px 3px 0px 0px #00000040;
   border: none;
+  color: black;
 }
 .calculator {
   justify-content: space-evenly;

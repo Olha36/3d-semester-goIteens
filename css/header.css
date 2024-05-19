@@ -99,7 +99,7 @@ header {
 }
 
 .switcher-modal {
-  display: none;
+  /* display: none; */
   position: absolute;
   top: 12%;
   left: 35%;
@@ -177,6 +177,9 @@ header {
 .switcher-modal_fourth {
   left: 9%;
   top: 50%;
+}
+.switcher-dark {
+  color:black;
 }
 .cross-menu,
 .thanks-cross-menu,
