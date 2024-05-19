@@ -3,6 +3,7 @@
   height: 297px;
   border: 1px solid black;
   margin: auto;
+  background-color: red;
 }
 .dino-wrapper h2 {
   margin: 13px 0;
