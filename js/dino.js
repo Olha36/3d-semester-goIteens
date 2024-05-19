@@ -21,7 +21,7 @@ function stopGame() {
 }
 
 function jump(event) {
-  if (event.key == " " || event.key == "Spacebar") {
+  if (event.key == " " || event.key == "Spacebar" || event.type === "touchstart") {
     dino.classList.add("jump");
     setTimeout(() => {
       dino.classList.remove("jump");
