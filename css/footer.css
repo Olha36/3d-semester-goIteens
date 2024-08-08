@@ -1,0 +1,51 @@
+.justify-content {
+  justify-content: space-evenly;
+}
+footer {
+  padding: 10% 0;
+  position: relative;
+}
+.footer-wrapper {
+  max-width: 95%;
+  margin: auto;
+}
+.footer-dark {
+  color: #4964f1
+}
+.copyright > p {
+  margin-top: 10px;
+  font-size: 10px;
+}
+.contacts > p,
+.contacts > a {
+  font-size: 12px;
+}
+.button-footer {
+  width: 107px;
+  height: 35px;
+}
+.input-footer {
+  border-radius: 20px;
+}
+.input-wrapper {
+  margin-right: 10px;
+}
+.email-subscription {
+  position: absolute;
+  left: 32%;
+  bottom: 17%;
+}
+
+@media screen and (max-width: 680px) {
+  .footer-wrapper,
+  .submit-mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contacts {
+    margin: 15px;
+  }
+  .button-footer {
+    margin: 10px;
+  }
+}

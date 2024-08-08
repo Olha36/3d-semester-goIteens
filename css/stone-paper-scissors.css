@@ -1,0 +1,56 @@
+.picture-wrapper {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #000;
+  margin: 10px;
+}
+.section-stone-wrapper {
+  position: relative;
+  flex-wrap: wrap;
+}
+.space-evenly {
+  justify-content: space-evenly;
+}
+.stone,
+.scissors,
+.paper {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.stone {
+  background-image: url('../img/stone.png');
+}
+.scissors {
+  background-image: url('../img/scissors.png');
+}
+.paper {
+  background-image: url('../img/paper.png');
+}
+
+.stone-scissors p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.button-style {
+  cursor: pointer;
+  width: 182px;
+  height: 35px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color:#000000;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+}
+.button-section {
+  justify-content: center;
+}
+
+@media screen and (max-width: 576px) {
+  .button-style {
+    padding: 2px 20px;
+  }
+}

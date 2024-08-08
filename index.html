@@ -1,17 +1,423 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>3d semester project</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  /> 
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/main.css"> 
+  <title>Моє портфоліо</title>
 </head>
 <body>
   <header>
+    <div class="container flex align-items">
+      <div class="logo">
+        <img src="./img/logo.png" alt="logo">
+      </div>
+
+      <div class="links flex align-items">
+        <div role="button" class="interactive-group flex align-items">
+          <p>Інтерактив</p>
+          <img src="./img/interactive-arrow.png" alt="arrow">
+        </div>
+        <p class="margin-left team"> <a href="#about-me">Наша команда</a></p>
+       <p><a href="#footer">Контакти</a></p> 
+      </div>
+
+      <div class="welcome-wrapper flex align-items">
+        <div class="switcher">
+
+          <div class="switcher-circle-day">
+            <span class="switcher-icon-day"></span>
+          </div>
+
+          <div class="switcher-circle-night">
+            <span class="switcher-icon-night"></span>
+          </div>
+        </div>
+        <p>Вітаємо,</p>
+        <span class="user-name">User! </span>
+      </div>
+
+      <div class="list-container">
+        <button class="more-button" id="burger-menu-btn" aria-label="Menu Button">
+          <div class="menu-icon-wrapper">
+            <div class="menu-icon-line half first"></div>
+            <div class="menu-icon-line"></div>
+            <div class="menu-icon-line half last"></div>
+          </div>
+        </button>
+        <ul class="more-button-list">
+          
+          <li role="button" class="more-button-list-item-interactive">
+            <span>Інтерактив</span>
+            <img src="./img/interactive-arrow.png" alt="arrow">
+          </li>
+          <li class="more-button-list-item">
+            <a href="#footer">Контакти</a>
+          </li>
+          <li class="more-button-list-item">
+            <div class="switcher">
+
+              <div class="switcher-circle-day">
+                <span class="switcher-icon-day"></span>
+              </div>
     
+              <div class="switcher-circle-night">
+                <span class="switcher-icon-night"></span>
+              </div>
+            </div>
+          </li>
+          <li class="more-button-list-item">
+            <p>Вітаємо,</p>
+            <span class="user-name">User! </span>
+          </li>
+          
+        </ul>
+      </div>
+      
+    </div>
+
+    <div class="interactive-modal align-items animate__animated animate__fadeInTopLeft">
+      <div class="modal-cross"></div>
+      <a href="#calculator-section" class="digital-group">Числовий</a>
+      <a href="#football" class="game-group">Ігровий</a>
+      <a href="#about-me" class="acquainted">Ознайомчий</a>
+      
+    </div>
+
+    <div class="switcher-modal flex align-items">
+      <img class="switcher-modal_first" src="./img/modal/1.png" alt="play">
+      <img class="switcher-modal_second" src="./img/modal/2.png" alt="cross and circle">
+      <img class="switcher-modal_third" src="./img/modal/3.png" alt="puzzles">
+      <img class="switcher-modal_fourth" src="./img/modal/4.png" alt="sword">
+      <div class="cross-menu"></div>
+      <p>
+        Привіт!
+       <br> Ви потрапили на сайт інтерактивних ігор та завдань
+       <br> Надіємось, що вам сподобається і ви отримаєте позитивні емоції!
+       <br> Бажаємо Вам гарно провести час!
+      </p>
+      <form action="">
+        <label for="name">Введіть своє ім’я:</label>
+        <input type="text" name="name" class="input-name" placeholder="Ваше ім’я...">
+      </form>
+      <button class="save">Зберегти</button>
+    </div>
+
+    <div class="thanks-subscription">
+      <div class="thanks-cross-menu"></div>
+      <img class="thanks-modal_first" src="./img/modal/1.png" alt="play">
+      <img class="thanks-modal_second" src="./img/modal/2.png" alt="cross and circle">
+      <img class="thanks-modal_third" src="./img/modal/3.png" alt="puzzles">
+      <img class="thanks-modal_fourth" src="./img/modal/4.png" alt="sword">
+      <p>Дякую за підписку!</p>
+    </div>
   </header>
-  <main></main>
-  <footer></footer>
+
+  <main>
+    <section class="popular-games">
+      <h1>Популярні інтерактивні ігри</h1>
+      <div class="line"></div>
+    </section>
+
+    <section class="birth-year-section" id="digital-sections">
+      <h2>Перевір в який рік ти народився</h2>
+      <div class="grid align-items justify">
+        <div class="input-wrapper flex">
+          <input type="number" class="birth-year" placeholder="Введіть рік народження">
+          <div class="search"></div>
+        </div>
+        <h3 class="year-heading"></h3>
+      </div>
+      <div class="line"></div>
+    </section>
+
+    <section class="guess-the-number" id="digital-sections">
+      <h2>Вгадай число, яке загадав комп’ютер від 1 до 100</h2>
+      <div class="grid align-items justify">
+        <div class="guess-wrapper flex">
+          <input type="number" class="guess-number" placeholder="Введіть число">
+          <div class="search-number"></div>
+        </div>
+        <h3 class="number-content"></h3>
+      </div>
+      <div class="button-section flex">
+        <button class="button-style play-again">Грати ще раз</button>
+      </div>
+      <div class="line"></div>
+      
+    </section>
+
+    <section class="stone-scissors" id="games">
+      <h2>Камінь - ножиці - папір</h2>
+      <div class="section-stone-wrapper flex space-evenly align-items">
+
+        <div class="pictures flex">
+          <div class="picture-wrapper stone" onclick="play('камінь')"></div>
+          <div class="picture-wrapper scissors" onclick="play('ножиці')"></div>
+          <div class="picture-wrapper paper" onclick="play('папір')"></div>
+        </div>
+
+        <div class="score">
+          <p>Рахунок: <span class="overall-score"></span> </p>
+          <p>Комп’ютер - <span class="computer-score"></span></p>
+          <p>Ви - <span class="user-score"></span></p>
+        </div>
+
+      </div>
+      <p class="winner"></p>
+      <div class="button-section flex">
+        <button class="button-style computer-variant">Варіант комп’ютера</button>
+      </div>
+
+      <div class="line"></div>
+
+    </section>
+
+    <section class="calculator-section" id="calculator-section">
+      <div class="calculator flex align-items column">
+        <div>
+          <input class="calculator-input first-number" type="number" placeholder="Введіть число">
+        </div>
+        <div class="button-group margin">
+          <button class="calculator-button addition">
+            <span>+</span>
+          </button>
+          <button class="calculator-button subtraction">
+            <span>-</span>
+          </button>
+          <button class="calculator-button multiplication">
+            <span>*</span> 
+          </button>
+          <button class="calculator-button division">
+            <span>/</span> 
+          </button>
+        </div>
+        <div>
+          <input class="calculator-input second-number" type="number" placeholder="Введіть число">
+        </div>
+        <div class="equals-button margin">
+          <button class="equals">
+            <span>=</span>
+          </button>
+        </div>
+        <div class="calculator-input result"></div>
+        <button class="reset margin">C</button>
+
+      </div>
+      <div class="line"></div>
+    </section>
+
+    <section class="time-calculator align-items">
+      <h2>Калькулятор часу</h2>
+      <p class="calculator-description">Калькулятор перетворює хвилини у формат "години:хвилини:"</p>
+      <div class="flex center column align-items">
+        <div class="input-wrapper flex">
+          <input type="number" class="time">
+          <div class="search-number find-time"></div>
+        </div>
+        <p class="show-time"></p>
+      </div>
+
+      <div class="line"></div>
+    </section>
+
+    <section class="dino-container" id="games">
+      <div class="dino-wrapper">
+        <h2>Google динозавр</h2>
+        <div class="dino-notifications flex column align-items">
+          <div class="button-section flex">
+            <button class="button-style start-game" type="button">Почати гру</button>
+          </div>
+          <p class="game-over"></p>
+          <div class="button-section flex margin">
+            <button class="button-style reset-game" type="button">Ще раз</button>
+          </div>
+        </div>
+        <div class="dino"></div>
+        <div class="cactus"></div>
+      </div>
+      
+      <div class="line"></div>
+    </section>
+
+    <section class="football-container" id="football">
+      <h2>Футбол</h2>
+      <div class="football-wrapper">
+        <div class="ball"></div>
+      </div>
+      <div class="line"></div>
+    </section>
+
+    <section class="highest-number" id="digital-sections">
+      <h2>Введіть 3 числа</h2>
+      <div class="flex number-group align-items">
+        <input type="number" class="calculator-input enter-number-one" placeholder="Введіть число">
+        <input type="number" class="calculator-input enter-number-two margin" placeholder="Введіть число">
+        <input type="number" class="calculator-input enter-number-three" placeholder="Введіть число">
+      </div>
+      <div class="button-section flex margin">
+        <button class="button-style find-biggest" type="button">Знайти найбільше число</button>
+      </div>
+      <p class="entered-number margin">Найбільше число, яке Ви ввели - <span class="your-number">(число)</span></p>
+      <div class="line"></div>
+    </section>
+
+    <section class="cards" id="about-me">
+      <h2>Про мене</h2>
+
+      <div class="cards-container">
+        <div class="card-container swiper">
+          <div class="card-content">
+            <div class="swiper-wrapper">
+              <article class="card-article swiper-slide">
+                <div class="card-image">
+                  <img src="./img/about-me/1.jpg" alt="image" class="card-img">
+                  <div class="card-shadow"></div>
+                </div>
+  
+                <div class="card-data">
+                  <h3 class="card-name">Ольга Кучерук</h3>
+                  <h4>Tech skills</h4>
+                  <p class="card-description">
+                    HTML5, CSS3, REACT.JS, MUI, TypeScript, 
+                    <br> JavaScript, Git, GitHub, Figma, Canva
+                    <br> SCSS/SASS, Bootstrap, Node.js, Azure
+                  </p>
+
+                </div>
+
+              </article>
+  
+              <article class="card-article swiper-slide">
+                <div class="card-image">
+                  <img src="./img/about-me/2.jpg" alt="image" class="card-img">
+                  <div class="card-shadow"></div>
+                </div>
+  
+                <div class="card-data">
+                  <h3 class="card-name">Ольга Кучерук</h3>
+                  <h4>Мови:</h4>
+                  <p class="card-description">
+                    Англійська - С1, польська - С1, українська - рідна, німецька В1+
+                  </p>
+
+                </div>
+              </article>
+
+              <article class="card-article swiper-slide">
+                <div class="card-image">
+                  <img src="./img/about-me/3.jpg" alt="image" class="card-img">
+                  <div class="card-shadow"></div>
+                </div>
+  
+                <div class="card-data">
+                  <h3 class="card-name">Ольга Кучерук</h3>
+                  <h4>Soft skills:</h4>
+                  <p class="card-description">
+                    Стресостійкість, наполегливість, самостійність, 
+                    <br> швидка адаптація до змін, орієнтація на результат, комунікабельність
+                  </p>
+
+                </div>
+              </article>
+    
+            </div>
+          </div>
+
+          <div class="swiper-button-next">
+            <img src="./img/right-arrow.png" alt="right-arrow">
+          </div>
+          
+          <div class="swiper-button-prev">
+            <img src="./img/left-arrow.png" alt="left-arrow">
+          </div>
+
+          <div class="swiper-pagination"></div>
+
+        </div>
+
+      </div>
+
+     
+    </section>
+
+    <section class="project-links">
+      <h2>Інші проекти</h2>
+      <ul class="ul-links">
+        <li>
+          <a href="./components/gallery/gallery.html">Натисніть щоб перейти до галереї зображень (JavaScript)☺️</a>
+        </li>
+        <li>
+          <a href="https://olha36.github.io/Guess-the-number-game/">Натисніть щоб перейти до гри "вгадай число за 10 спроб☺️" 
+          <a href="https://github.com/Olha36/Guess-the-number-game" class="github-code">GitHub code</a> 
+          </a>
+        </li>
+
+        <li>
+          <a href="https://olha36.github.io/country-search/">Натисніть щоб перейти до проекту пошуку країн.☺️" 
+          <a href="https://github.com/Olha36/country-search" class="github-code">GitHub code</a> 
+          </a>
+        </li>
+
+        <li>
+          <a href="https://mini-project-blog-posts.onrender.com/">Натисніть, щоб перейти до проекту зі створення блог постів☺️</a>
+          <a href="https://github.com/Olha36/mini-project-blog-posts" class="github-code">GitHub code</a> 
+        </li>
+        
+      </ul>
+            
+    </section>
+
+  </main>
+
+  <footer id="footer">
+    <div class="footer-wrapper flex justify-content align-items">
+
+      <div class="logo">
+        <img src="./img/logo.png" alt="logo">
+      </div>
+
+      <div class="contacts">
+        <p id="contacts-group">Тел: +48 731 421 340</p>
+        <p>E-Mail: olhakucheruk36@gmail.com</p>
+        <p>Facebook: <a href="https://www.facebook.com/olhakucheruk/">Olha Kucheruk</a></p>
+        <p>Twitter: <a href="https://x.com/OlhaKucheruk">Olha Kucheruk</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/o_l_h_a_maria/">Olha Kucheruk</a></p>
+      </div>
+      <div class="submit">
+        <div class="flex justify-content submit-mobile">
+
+          <div class="input-wrapper flex">
+            <input type="email" class="input-footer" placeholder="Ваша ел. адреса...">
+          </div>
+          <div class="button-section flex button-footer">
+            <button class="button-style subscribe">Підписатись</button>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>*Підписавшись, Ви зможете отримувати інформацію про новинки на сайті</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="email-subscription">
+      <div class="email-cross-menu"></div>
+      <img class="email-modal_first" src="./img/modal/1.png" alt="play">
+      <img class="email-modal_second" src="./img/modal/2.png" alt="cross and circle">
+      <img class="email-modal_third" src="./img/modal/3.png" alt="puzzles">
+      <img class="email-modal_fourth" src="./img/modal/4.png" alt="sword">
+      <p>Ваш імейл отримано!</p>
+    </div>
+  </footer>
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/stone-paper-scissors.js"></script>
+  <script src="./js/main.js" type="module"></script>
+  
 </body>
 </html>

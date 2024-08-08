@@ -1,0 +1,34 @@
+.football-wrapper {
+  position: relative;
+  width: 720px;
+  height: 220px;
+  border-radius: 37px;
+  border: 2px;
+  background: linear-gradient(135deg, rgb(82, 229, 231) 10%, rgb(19, 12, 183) 100%);
+  margin: auto;
+}
+.football-wrapper-dark {
+  background: radial-gradient(circle at 74.2% 50.9%, rgb(14, 72, 222) 5.2%, rgb(3, 22, 65) 75.3%);
+}
+.ball {
+   width: 50px; 
+  height: 50px; 
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  background-image: url('../img/ball.png'); 
+  background-size: cover;
+  transform-origin: center;
+}
+
+@media screen and (max-width: 768px) {
+  .football-wrapper {
+    width: 536px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .football-wrapper {
+    width: 320px;
+  }
+}

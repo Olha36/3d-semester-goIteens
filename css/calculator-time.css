@@ -1,0 +1,18 @@
+.time {
+  width: 150px;
+  height: 35px;
+  background-color: #D7D7D7;
+  border-radius: 20px 0 0 20px;
+  padding: 10px 45px 10px 10px;
+  border: none;
+}
+.center {
+  justify-content: center;
+}
+.show-time {
+  margin-left: 30%;
+}
+.calculator-description {
+  text-align: center;
+  margin-bottom: 20px;
+}

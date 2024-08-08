@@ -1,0 +1,13 @@
+.ul-links {
+  text-align: center;
+  
+}
+.ul-links a {
+  text-decoration: none;
+  color: #4964f1;
+}
+.ul-links .github-code {
+ background: -webkit-linear-gradient(109.6deg, rgb(9, 9, 121) 11.2%, rgb(144, 6, 161) 53.7%, rgb(0, 212, 255) 100.2%);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

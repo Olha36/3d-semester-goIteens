@@ -1,0 +1,16 @@
+.number-group {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+.entered-number {
+  text-align: center;
+}
+
+@media screen and (max-width: 425px) {
+  .number-group {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
